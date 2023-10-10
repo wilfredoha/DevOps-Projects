@@ -10,7 +10,7 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 1. AWS account setup and Provisioning an Ubuntu Server
 2. Connecting to your EC2 Instance
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/1.png)
 
 IMPORTANT – save your private key (.pem file) securely and do not share it with anyone! If you lose it, you will not be able to
 connect to your server ever again!
