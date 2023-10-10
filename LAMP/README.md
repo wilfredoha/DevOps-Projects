@@ -74,6 +74,10 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/16.png)
 
+# Connecting to EC2 terminal
+
+# Using Windows Terminal
+
 **SSH into the instance** - The command copied before must be run at the locations where the Key Pair is located. Is this case I'm using Git Bash, but you can use another console(Putty, MobaXterm)
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/17.png)
@@ -82,36 +86,16 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/18.png)
 
-For Windows users, you will need a tool called putty to connect to your EC2 Instance. Download Putty Here.
-For Mac users, you can simply open up Terminal and use the ssh command to get into the server.
-
-IMPORTANT NOTICE
-Both Putty and ssh use the SSH protocol to establish connectivity between computers. It is the most secure protocol because it uses
-crypto algorithms to encrypt the data that is transmitted – it uses TCP port 22 which is open for all newly created EC2 intances in
-AWS by default. Most of these terminologies will make more sense to you as you proceed. So for now, if nothing makes sense, just 
-ignore. But be assured that the information is already registered in your sub-conscious mind. So it will become useful to you soon.
-
-The process to connect to the virtual server is different between Windows and Mac. So lets take a quick tour.
-
-# Connecting to EC2 terminal
-
 ## Using the terminal on MAC/Linux
 
 - The terminal is already installed by default. You just need to open it up.
-- You do not need to convert to a .ppk file. Just use the same key as downloaded from AWS.
 - Change directory into the loacation where your PEM file is. Most likely will be in the Downloads folder
 
 ```
 cd ~/Downloads
 ```
 
-
-IMPORTANT - Anywhere you see these anchor tags < > , going forward, it means you will need to replace the content in there with values 
-specific to your situation. For example, if we need you to replace the name you have saved the private key on your machine, we will 
-write something like < private-key-name >.
-
-If the private key you downloaded was named my-private-key.pem simply remove the anchor tags and insert my-private-key.pem in the
-command you are required to execute. Lets try this and follow the instructions below to get some work done.
+**IMPORTANT** - Anywhere you see these anchor tags < > , going forward, it means you will need to replace the content in there with values specific to your situation. For example, if we need you to replace the name you have saved the private key on your machine, we will write something like < private-key-name >.
 
 - Change premissions for the private key file (.pem), otherwise you can get an error "Bad permissions"
 
@@ -119,44 +103,13 @@ command you are required to execute. Lets try this and follow the instructions b
 sudo chmod 0400 <private-key-name>.pem
 ```
 
-
 - Connect to the instance by running
 
 ```
 ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
 ``` 
  
-# Using Windows Terminal
-
-Remember the private key your downloaded from AWS while provisioning the server? It is a PEM file format. You can open it up to see
-the content and have a glimpse of what a PEM file looks like.
-
-Now, we are going to use that PEM key to connect to our EC2 Instnace via ssh.
-
-On, windows the windows terminal tool is not installed by default, you can install it from here
-
-cd Downloads
-
-IMPORTANT - Anywhere you see these anchor tags < > , going forward, it means you will need to replace the content in there with values
-specific to your situation. For example, if we need you to replace the name you have saved the private key on your machine, we will 
-write something like < private-key-name >.
-
-If the private key you downloaded was named my-private-key.pem simply remove the anchor tags and insert my-private-key.pem in the 
-command you are required to execute. Lets try this and follow the instructions below to get some work done.
-
-Connect to the instance by 
-
-```
-ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
-``` 
- 
- 
- Congratulations! You have just created your very first Linux Server in the Cloud and our set up looks like this now:
-  (You are the client)
-
-
-
-![projject1-step0](https://user-images.githubusercontent.com/85270361/210112007-5cd14a18-8aaa-4c7a-857e-b18400535bdd.PNG)
+>Congratulations! You have just created your very first Linux Server in the Cloud and our set up looks like this now: (You are the client)
 
 
 Please read information about AWS free tier limits and make sure that you STOP your EC2 instance when you are not using it.
