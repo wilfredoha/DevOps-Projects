@@ -9,15 +9,24 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 
 ## Provisioning an Ubuntu Server and connecting to your EC2 Instance
 
+**Sign in to your AWS account and access the ec2 option**
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/1.png)
+
+**Creating a Key Pair** - Under *Network & Security* in the left side panel, select Key Pairs
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/2.png)
 
+**Click on Create Key Pair**
+
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/3.png)
+
+**Enter a Name and click Create Key Pair**
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/4.png)
 
 **IMPORTANT** – Save your private key (.pem file) securely and do not share it with anyone! If you lose it, you will not be able to connect to your server ever again!
+
+**Creating a Security Group** - Under *Network & Security* in the left side panel, select Security Groups
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/5.png)
 
