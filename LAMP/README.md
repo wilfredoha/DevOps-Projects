@@ -138,7 +138,7 @@ sudo apt install apache2
 sudo systemctl status apache2
 ```
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/19.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/735bb1d7f54cb840cd4cdf6f3ef5e1f8e995fcc9/LAMP/images/19.png)
 
 If it is green and running, then you did everything correctly – you have just launched your first Web Server in the Clouds!
 
