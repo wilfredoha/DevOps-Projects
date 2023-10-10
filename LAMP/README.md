@@ -38,7 +38,7 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/7.png)
 
-**Add Inbound rules** - You need to SSH in to your instance and open port 80(http)
+**Add Inbound rules** - You need to SSH into your instance and open port 80(http)
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/8.png)
 
