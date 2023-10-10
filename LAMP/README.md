@@ -1,24 +1,16 @@
-# Step 0 – Preparing prerequisites
+# Preparing prerequisites
 In order to complete this project you will need an AWS account and a virtual server with Ubuntu Server OS.
 
 [AWS](https://aws.amazon.com/) is the biggest Cloud Service Provider and it offers a free tier account that we are going to leverage for our projects.
-
-Do not focus too much on AWS itself right now, there will be a proper Cloud introduction and configuration projects later in our course.
 
 Right now, all we need to know is that AWS can provide us with a free virtual server called EC2 (Elastic Compute Cloud) for our needs.
 
 Spinning up a new EC2 instance (an instance of a virtual server) is only a matter of a few clicks.
 
-You can either Watch the videos below to get yourself set up.
-
 1. AWS account setup and Provisioning an Ubuntu Server
 2. Connecting to your EC2 Instance
 
-Or follow the instructions below.
-
-1. Register a new AWS account following this instruction.
-2. Select your preferred region (the closest to you) and launch a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
-launch EC2
+![Image](images\1.png)
 
 IMPORTANT – save your private key (.pem file) securely and do not share it with anyone! If you lose it, you will not be able to
 connect to your server ever again!
@@ -66,9 +58,7 @@ sudo chmod 0400 <private-key-name>.pem
 ```
 ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
 ``` 
-  
-  
-  
+ 
 # Using Windows Terminal
 
 Remember the private key your downloaded from AWS while provisioning the server? It is a PEM file format. You can open it up to see
@@ -162,7 +152,7 @@ First, let us try to check how we can access it locally in our Ubuntu shell, run
 ```
 curl http://localhost:80
 or
- curl http://127.0.0.1:80
+curl http://127.0.0.1:80
 ```
 
 
