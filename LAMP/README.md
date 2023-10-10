@@ -176,6 +176,6 @@ If you see following page, then your web server is now correctly installed and a
 
 **Apache Ubuntu Default Page**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/735bb1d7f54cb840cd4cdf6f3ef5e1f8e995fcc9/LAMP/images/20.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/4cf6b042589ea2a0461c5aec63331f2a969171a8/LAMP/images/20.png)
 
 In fact, it is the same content that you previously got by ‘curl’ command, but represented in nice HTML formatting by your web browser.
