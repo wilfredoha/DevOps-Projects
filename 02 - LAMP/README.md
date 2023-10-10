@@ -21,7 +21,7 @@ sudo apt install apache2
 sudo systemctl status apache2
 ```
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/735bb1d7f54cb840cd4cdf6f3ef5e1f8e995fcc9/LAMP/images/19.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/02%20-%20LAMP/images/19.png/19.png)
 
 If it is green and running, then you did everything correctly – you have just launched your first Web Server in the Clouds!
 
@@ -57,7 +57,7 @@ If you see following page, then your web server is now correctly installed and a
 
 **Apache Ubuntu Default Page**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/4cf6b042589ea2a0461c5aec63331f2a969171a8/LAMP/images/20.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/02%20-%20LAMP/images/19.png/20.png)
 
 In fact, it is the same content that you previously got by ‘curl’ command, but represented in nice HTML formatting by your web browser.
 
@@ -83,7 +83,7 @@ $ sudo mysql
 
 This will connect to the MySQL server as the administrative database user root, which is inferred by the use of sudo when running this command. You should see output like this:
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/LAMP/images/21.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/02%20-%20LAMP/images/19.png/21.png)
 
 It’s recommended that you run a security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to your database system. Before running the script you will set a password for the root user, using mysql_native_password as default authentication method. We’re defining this user’s password as PassWord.1.
 
