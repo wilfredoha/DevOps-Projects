@@ -10,69 +10,69 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 ## Provisioning an Ubuntu Server and connecting to your EC2 Instance
 
 **Sign in to your AWS account and access the ec2 option**
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/1.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/1.png)
 
 **Creating a Key Pair** - Under *Network & Security* in the left side panel, select Key Pairs
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/2.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/2.png)
 
 **Click Create Key Pair**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/3.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/3.png)
 
 **Enter a Name and click Create Key Pair**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/4.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/4.png)
 
 **IMPORTANT** – Save your private key (.pem file) securely and do not share it with anyone! If you lose it, you will not be able to connect to your server ever again!
 
 **Creating a Security Group** - Under *Network & Security* in the left side panel, select Security Groups
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/5.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/5.png)
 
 **Click Create Security Group**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/6.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/6.png)
 
 **Enter a Security group name**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/7.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/7.png)
 
 **Add Inbound rules** - You need to SSH into your instance and open port 80(http)
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/8.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/8.png)
 
 **Click Create security group**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/9.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/9.png)
 
 **In the left side panel click EC2 Dashboard and then click Launch instance**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/10.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/10.png)
 
 **Select Ubuntu an then look for the Ubuntu Server 20.04** - Make sure to be on the Free tier
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/11.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/11.png)
 
 **Instance type and Key pair** - Use t2.micro (Free tier). Look for the Key Pair created before
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/12.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/12.png)
 
 **Select security group and Lauch instance** - look for the security group created before. Click Launch instance
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/13.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/13.png)
 
 **Make suer your new ec2 instances is Running**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/14.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/14.png)
 
 **Select the ec2 instance an click Connect**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/15.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/15.png)
 
 **Click SSH Client and copy the command** - We use this command to connect to the ec2 instance, as you can see the key pair name is placed in the command and the DNS of the instance.
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/16.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/16.png)
 
 # Connecting to EC2 terminal
 
@@ -80,11 +80,11 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 
 **SSH into the instance** - The command copied before must be run at the locations where the Key Pair is located. Is this case I'm using Git Bash, but you can use another console(Putty, MobaXterm)
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/17.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/17.png)
 
 **Successful connection**
 
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/AWS%20-%20EC2/images/18.png)
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/9e037e5a2028f886ee62c85445eecf08cfbafb7b/01%20-%20AWS%20-%20EC2/images/18.png)
 
 ## Using the terminal on MAC/Linux
 
