@@ -202,10 +202,7 @@ This will connect to the MySQL server as the administrative database user root, 
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/LAMP/images/21.png)
 
-It’s recommended that you run a security script that comes pre-installed with MySQL. This script will remove some insecure default 
-settings and lock down access to your database system. Before running the script you will set a password for the root user, using 
-mysql_native_password as default authentication method. We’re defining this user’s password as PassWord.1.
-
+It’s recommended that you run a security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to your database system. Before running the script you will set a password for the root user, using mysql_native_password as default authentication method. We’re defining this user’s password as PassWord.1.
 
 ```
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
@@ -216,37 +213,24 @@ Exit the MySQL shell with:
 ```
 mysql> exit
 ```
-
-
 Start the interactive script by running:
 
 ```
 $ sudo mysql_secure_installation
 ```
 
-
 This will ask if you want to configure the VALIDATE PASSWORD PLUGIN.
 
-Note: Enabling this feature is something of a judgment call. If enabled, passwords which don’t match the specified criteria will
-be rejected by MySQL with an error. It is safe to leave validation disabled, but you should always use strong, unique passwords 
-for database credentials.
+Note: Enabling this feature is something of a judgment call. If enabled, passwords which don’t match the specified criteria will be rejected by MySQL with an error. It is safe to leave validation disabled, but you should always use strong, unique passwords for database credentials.
 
 Answer Y for yes, or anything else to continue without enabling.
 
-
-```
-VALIDATE PASSWORD PLUGIN can be used to test passwords
-and improve security. It checks the strength of password
-and allows the users to set only those passwords which are
-secure enough. Would you like to setup VALIDATE PASSWORD plugin?
+>VALIDATE PASSWORD PLUGIN can be used to test passwords and improve security. It checks the strength of password and allows the users to set only those passwords which are secure enough. Would you like to setup VALIDATE PASSWORD plugin?
 
 Press y|Y for Yes, any other key for No:
-```
 
 
-If you answer “yes”, you’ll be asked to select a level of password validation. Keep in mind that if you enter 2 for the strongest
-level, you will receive errors when attempting to set any password which does not contain numbers, upper and lowercase letters, 
-and special characters, or which is based on common dictionary words e.g PassWord.1.
+If you answer “yes”, you’ll be asked to select a level of password validation. Keep in mind that if you enter 2 for the strongest level, you will receive errors when attempting to set any password which does not contain numbers, upper and lowercase letters, and special characters, or which is based on common dictionary words e.g PassWord.1.
 
 
 ```
