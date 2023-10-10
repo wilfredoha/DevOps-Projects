@@ -66,11 +66,19 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/14.png)
 
+**Select the ec2 instance an click Connect**
+
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/15.png)
+
+**Click SSH Client and copy the command** - We use this command to connect to the ec2 instance, as you can see the key pair name is placed in the command and the DNS of the instance.
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/16.png)
 
+**SSH into the instance** - The command copied before must be run at the locations where the Key Pair is located. Is this case I'm using Git Bash, but you can use another console(Putty, MobaXterm)
+
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/17.png)
+
+**Successful connection**
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/18.png)
 
