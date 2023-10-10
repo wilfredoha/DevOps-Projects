@@ -16,7 +16,7 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/2.png)
 
-**Click on Create Key Pair**
+**Click Create Key Pair**
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/3.png)
 
@@ -30,21 +30,39 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/5.png)
 
+**Click Create Security Group**
+
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/6.png)
+
+**Enter a Security group name**
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/7.png)
 
+**Add Inbound rules** - You need to SSH in to your instance and open port 80(http)
+
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/8.png)
+
+**Click Create security group**
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/9.png)
 
+**In the left side panel click EC2 Dashboard and then click Launch instance**
+
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/10.png)
+
+**Select Ubuntu an then look for the Ubuntu Server 20.04** - Make sure to be on the Free tier
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/11.png)
 
+**Instance type and Kei pair** - Use t2.micro (Free tier). Look for the Key Pair created before
+
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/12.png)
 
+**Select security group and Lauch instance** - look for the security group created before. Click Launch instance
+
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/13.png)
+
+**Make suer your new ec2 instances is Running**
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/14.png)
 
