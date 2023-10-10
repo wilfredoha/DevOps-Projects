@@ -1,120 +1,3 @@
-# Preparing prerequisites
-In order to complete this project you will need an AWS account and a virtual server with Ubuntu Server OS.
-
-[AWS](https://aws.amazon.com/) is the biggest Cloud Service Provider and it offers a free tier account that we are going to leverage for our projects.
-
-Right now, all we need to know is that AWS can provide us with a free virtual server called EC2 (Elastic Compute Cloud) for our needs.
-
-Spinning up a new EC2 instance (an instance of a virtual server) is only a matter of a few clicks.
-
-## Provisioning an Ubuntu Server and connecting to your EC2 Instance
-
-**Sign in to your AWS account and access the ec2 option**
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/1.png)
-
-**Creating a Key Pair** - Under *Network & Security* in the left side panel, select Key Pairs
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/2.png)
-
-**Click Create Key Pair**
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/3.png)
-
-**Enter a Name and click Create Key Pair**
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/4.png)
-
-**IMPORTANT** – Save your private key (.pem file) securely and do not share it with anyone! If you lose it, you will not be able to connect to your server ever again!
-
-**Creating a Security Group** - Under *Network & Security* in the left side panel, select Security Groups
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/5.png)
-
-**Click Create Security Group**
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/6.png)
-
-**Enter a Security group name**
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/7.png)
-
-**Add Inbound rules** - You need to SSH into your instance and open port 80(http)
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/8.png)
-
-**Click Create security group**
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/9.png)
-
-**In the left side panel click EC2 Dashboard and then click Launch instance**
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/10.png)
-
-**Select Ubuntu an then look for the Ubuntu Server 20.04** - Make sure to be on the Free tier
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/11.png)
-
-**Instance type and Key pair** - Use t2.micro (Free tier). Look for the Key Pair created before
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/12.png)
-
-**Select security group and Lauch instance** - look for the security group created before. Click Launch instance
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/13.png)
-
-**Make suer your new ec2 instances is Running**
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/14.png)
-
-**Select the ec2 instance an click Connect**
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/15.png)
-
-**Click SSH Client and copy the command** - We use this command to connect to the ec2 instance, as you can see the key pair name is placed in the command and the DNS of the instance.
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/16.png)
-
-# Connecting to EC2 terminal
-
-# Using Windows Terminal
-
-**SSH into the instance** - The command copied before must be run at the locations where the Key Pair is located. Is this case I'm using Git Bash, but you can use another console(Putty, MobaXterm)
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/17.png)
-
-**Successful connection**
-
-![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/18.png)
-
-## Using the terminal on MAC/Linux
-
-- The terminal is already installed by default. You just need to open it up.
-- Change directory into the loacation where your PEM file is. Most likely will be in the Downloads folder
-
-```
-cd ~/Downloads
-```
-
-**IMPORTANT** - Anywhere you see these anchor tags < > , going forward, it means you will need to replace the content in there with values specific to your situation. For example, if we need you to replace the name you have saved the private key on your machine, we will write something like < private-key-name >.
-
-- Change premissions for the private key file (.pem), otherwise you can get an error "Bad permissions"
-
-```
-sudo chmod 0400 <private-key-name>.pem
-```
-
-- Connect to the instance by running
-
-```
-ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
-``` 
- 
-*Congratulations! You have just created your very first Linux Server in the Cloud and our set up looks like this now: (You are the client)*
-
-
-Please read information about AWS free tier limits and make sure that you STOP your EC2 instance when you are not using it. 
-
-Note that every time you stop and start your EC2 instance – you will have a new IP address, it is normal behavior, so do not forget to update your SSH credentials when you try to connect to your EC2 server.
 
 # STEP 1 — INSTALLING APACHE AND UPDATING THE FIREWALL
 
@@ -243,35 +126,22 @@ STRONG Length >= 8, numeric, mixed case, special characters and dictionary      
 Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 1
 ```
 
+>Regardless of whether you chose to set up the VALIDATE PASSWORD PLUGIN, your server will next ask you to select and confirm a password for the MySQL root user. This is not to be confused with the system root. The database root user is an administrative user with full privileges over the database system. Even though the default authentication method for the MySQL root user dispenses the use of a password, even when one is set, you should define a strong password here as an additional safety measure. We’ll talk about this in a moment.
 
-Regardless of whether you chose to set up the VALIDATE PASSWORD PLUGIN, your server will next ask you to select and confirm a
-password for the MySQL root user. This is not to be confused with the system root. The database root user is an administrative user
-with full privileges over the database system. Even though the default authentication method for the MySQL root user dispenses the
-use of a password, even when one is set, you should define a strong password here as an additional safety measure. 
-We’ll talk about this in a moment.
-
-
-If you enabled password validation, you’ll be shown the password strength for the root password you just entered and your server
-will ask if you want to continue with that password. If you are happy with your current password, enter Y for “yes” at the prompt:
-
+>If you enabled password validation, you’ll be shown the password strength for the root password you just entered and your server will ask if you want to continue with that password. If you are happy with your current password, enter Y for “yes” at the prompt:
 
 ```
 Estimated strength of the password: 100 
 Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : y
 ```
 
-
-For the rest of the questions, press Y and hit the ENTER key at each prompt. This will prompt you to change the root password, 
-remove some anonymous users and the test database, disable remote root logins, and load these new rules so that MySQL immediately
-respects the changes you have made.
+For the rest of the questions, press Y and hit the ENTER key at each prompt. This will prompt you to change the root password, remove some anonymous users and the test database, disable remote root logins, and load these new rules so that MySQL immediately respects the changes you have made.
 
 When you’re finished, test if you’re able to log in to the MySQL console by typing:
-
 
 ```
 $ sudo mysql -p
 ```
-
 
 Notice the -p flag in this command, which will prompt you for the password used after changing the root user password.
 
@@ -283,10 +153,8 @@ mysql> exit
 
 Notice that you need to provide a password to connect as the root user.
 
-For increased security, it’s best to have dedicated user accounts with less expansive privileges set up for every database,
-especially if you plan on having multiple databases hosted on your server.
+For increased security, it’s best to have dedicated user accounts with less expansive privileges set up for every database, especially if you plan on having multiple databases hosted on your server.
 
-Note: At the time of this writing, the native MySQL PHP library mysqlnd doesn’t support caching_sha2_authentication, the default authentication method for MySQL 8. For that reason, when creating database users for PHP applications on MySQL 8, you’ll need to make sure they’re configured to use mysql_native_password instead.
 
 Your MySQL server is now installed and secured. Next, we will install PHP, the final component in the LAMP stack.
 
