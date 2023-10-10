@@ -112,33 +112,17 @@ ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
 >Congratulations! You have just created your very first Linux Server in the Cloud and our set up looks like this now: (You are the client)
 
 
-Please read information about AWS free tier limits and make sure that you STOP your EC2 instance when you are not using it.
-
-Stop EC2
-
-All we need to know right now is that we can use 750 hours (31.25 days) of t2.micro server per month for the first 12 months FOR FREE.
-
-You can launch and stop new instances when you need to, but by default there is a soft-limit of maximum 5 running instances at the same time. In our first projects we will be using only 1 running instance at a time. When you stop an instance – it stops consuming available hours.
+Please read information about AWS free tier limits and make sure that you STOP your EC2 instance when you are not using it. 
 
 Note that every time you stop and start your EC2 instance – you will have a new IP address, it is normal behavior, so do not forget to update your SSH credentials when you try to connect to your EC2 server.
-
-Let us move on and configure our EC2 machine to serve a Web server!
 
 # STEP 1 — INSTALLING APACHE AND UPDATING THE FIREWALL
 
 What exactly is Apache?
 
-Apache HTTP Server is the most widely used web server software. Developed and maintained by Apache Software Foundation, Apache is an
-open source software available for free. It runs on 67% of all webservers in the world. It is fast, reliable, and secure. It can 
-be highly customized to meet the needs of many different environments by using extensions and modules. 
+Apache HTTP Server is the most widely used web server software. Developed and maintained by Apache Software Foundation, Apache is an open source software available for free. It is fast, reliable, and secure. It can be highly customized to meet the needs of many different environments by using extensions and modules. 
 
-Most WordPress hosting providers use Apache as their web server software. However, websites and other applications can run on other
-web server software as well. Such as Nginx, Microsoft’s IIS, etc.
-
-The Apache web server is among the most popular web servers in the world. It’s well documented, has an active community of users, and
-has been in wide use for much of the history of the web, which makes it a great default choice for hosting a website.
-
-Install Apache using Ubuntu’s package manager ‘apt’:
+**Install Apache using Ubuntu’s package manager ‘apt’**
 
 ```
 #update a list of packages in package manager
@@ -154,6 +138,7 @@ sudo apt install apache2
 sudo systemctl status apache2
 ```
 
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/19.png)
 
 If it is green and running, then you did everything correctly – you have just launched your first Web Server in the Clouds!
 
