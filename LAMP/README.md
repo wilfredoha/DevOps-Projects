@@ -54,7 +54,7 @@ Spinning up a new EC2 instance (an instance of a virtual server) is only a matte
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/11.png)
 
-**Instance type and Kei pair** - Use t2.micro (Free tier). Look for the Key Pair created before
+**Instance type and Key pair** - Use t2.micro (Free tier). Look for the Key Pair created before
 
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/48af1af6a84476647e212604261bed8c37839d79/LAMP/images/12.png)
 
