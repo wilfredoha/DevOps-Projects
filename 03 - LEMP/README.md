@@ -57,7 +57,6 @@ As an output you can see some strangely formatted test, do not worry, we just ma
 Now it is time for us to test how our Nginx server can respond to requests from the Internet.
 Open a web browser of your choice and try to access following url
 
-
 ```
 http://<Public-IP-Address>:80
 ```
@@ -73,9 +72,7 @@ The URL in browser shall also work if you do not specify port number since all w
 
 If you see following page, then your web server is now correctly installed and accessible through your firewall.
 
-
-![projje2-step0](https://user-images.githubusercontent.com/85270361/210116186-f5ec30cf-5fe3-410d-9c21-2f26b03c4815.PNG)
-
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/03%20-%20LEMP/images/28.png)	
 
 In fact, it is the same content that you previously got by ‘curl’ command, but represented in nice HTML formatting by your web 
 browser.
