@@ -14,30 +14,27 @@ In order to complete this project you will need an AWS account and a virtual ser
 
 If you do not have an AWS account – go back to [01 - AWS - EC2](https://github.com/wilfredoha/DevOps-Projects/tree/main/01%20-%20AWS%20-%20EC2) Preparing prerequisites to sign in to AWS free tier account and create a new EC2 Instance of t2.micro family with Ubuntu Server 22.04 LTS (HVM) image. Remember, you can have multiple EC2 instances, but make sure you STOP the ones you are not working with at the moment to save available free hours.
 
-HINT: As we have done in project 1, create a new instance for project 2 and ssh into the instance, please refer to this video if you need to refresh your memory on how
-
 # STEP 1 – INSTALLING THE NGINX WEB SERVER
 
 In order to display web pages to our site visitors, we are going to employ Nginx, a high-performance web server. We’ll use the apt package manager to install this package.
 
-Since this is our first time using apt for this session, start off by updating your server’s package index. Following that, you can 
-use apt install to get Nginx installed:
+Since this is our first time using apt for this session, start off by updating your server’s package index. Following that, you can use apt install to get Nginx installed:
 
 ```
 sudo apt update
 sudo apt install nginx
 ```
 
-When prompted, enter Y to confirm that you want to install Nginx. Once the installation is finished, the Nginx web server will be 
-active and running on your Ubuntu 20.04 server.
+When prompted, enter Y to confirm that you want to install Nginx. Once the installation is finished, the Nginx web server will be active and running on your Ubuntu 22.04 server.
 
 To verify that nginx was successfully installed and is running as a service in Ubuntu, run:
 
 ```
 sudo systemctl status nginx
 ```
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/03%20-%20LEMP/images/26.png)	
 
-If it is green and running, then you did everything correctly – you have just launched your first Web Server in the Clouds!
+If it is green and running, then you did everything correctly – you have just launched your first Web Server in the Cloud!
 
 Before we can receive any traffic by our Web Server, we need to open TCP port 80 which is default port that web brousers use to 
 access web pages in the Internet.
