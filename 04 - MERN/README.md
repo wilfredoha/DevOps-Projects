@@ -36,4 +36,4 @@ In this project and going forward, we are going to explore the usage [windows te
 
 Task To deploy a simple To-Do application that creates To-Do lists like this:
 
-![porr3](https://user-images.githubusercontent.com/85270361/210118580-173d44bc-f848-48a3-b63d-4aed7998c638.PNG)
+![to_do_list](https://user-images.githubusercontent.com/85270361/210118580-173d44bc-f848-48a3-b63d-4aed7998c638.PNG)
