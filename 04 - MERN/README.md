@@ -28,7 +28,7 @@ If you do not have an AWS account – go back to [01 - AWS - EC2](https://github
 
 >Hint #1: When you create your EC2 Instances, you can add Tag "Name" to it with a value that corresponds to a current project you are working on – it will be reflected in the name of the EC2 Instance. Like this:
 
-![aws_console](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/Mern.png)
+![aws_console](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/aws_ec2_tag.png)
 
 >Hint #2 (for Windows users only): As we saw in previous projects we can use Putty or Git Bash to connect to our EC2 Instances.
 
