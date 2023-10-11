@@ -6,7 +6,7 @@ Side Self Study
 1. Make yourself familiar with basic SQL syntax and most commonly used commands
 2. Be comfortable using not only VIM, but also Nano editor as well, get to know basic Nano commands
 
-## Step 0 – Preparing prerequisites
+# Step 0 – Preparing prerequisites
 
 In order to complete this project you will need an AWS account and a virtual server with Ubuntu Server OS.
 
