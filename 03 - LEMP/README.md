@@ -112,7 +112,7 @@ mysql> exit
 Start the interactive script by running:
 
 ```
-$ sudo mysql_secure_installation
+sudo mysql_secure_installation
 ```
 
 This will ask if you want to configure the VALIDATE PASSWORD PLUGIN.
@@ -157,7 +157,7 @@ For the rest of the questions, press Y and hit the ENTER key at each prompt. Thi
 When you’re finished, test if you’re able to log in to the MySQL console by typing:
 
 ```
-$ sudo mysql -p
+sudo mysql -p
 ```
 
 Notice the -p flag in this command, which will prompt you for the password used after changing the root user password.
