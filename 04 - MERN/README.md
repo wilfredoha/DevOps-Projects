@@ -28,22 +28,12 @@ If you do not have an AWS account – go back to [01 - AWS - EC2](https://github
 
 >Hint #1: When you create your EC2 Instances, you can add Tag "Name" to it with a value that corresponds to a current project you are working on – it will be reflected in the name of the EC2 Instance. Like this:
 
+![aws_console](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/Mern.png)
 
-![pro3](https://user-images.githubusercontent.com/85270361/210118546-bead7609-5dea-4538-86f6-2e69c17408cc.PNG)
+>Hint #2 (for Windows users only): As we saw in previous projects we can use Putty or Git Bash to connect to our EC2 Instances.
 
+In this project and going forward, we are going to explore the usage [windows terminal](https://learn.microsoft.com/en-us/windows/terminal/install).
 
-Hint #2 (for Windows users only): In previous projects we used Putty and Git Bash to connect to our EC2 Instances.
-
-In this project and going forward, we are going to explore the usage windows terminal.
-
-Watch this videos to learn how to set up windows terminal on your pc;
-
-windows installatatiosn part 1
-
-windows installatatiosn part 2
-
-Task
-To deploy a simple To-Do application that creates To-Do lists like this:
-
+Task To deploy a simple To-Do application that creates To-Do lists like this:
 
 ![porr3](https://user-images.githubusercontent.com/85270361/210118580-173d44bc-f848-48a3-b63d-4aed7998c638.PNG)
