@@ -1,12 +1,10 @@
-# Project 2 covers similar concepts as Project 1 and helps to cement your skills of deploying Web solutions using LEMP stacks.
+# Project LEMP covers similar concepts as Project LAMP and helps to cement your skills of deploying Web solutions using LEMP stacks.
 
 In this project you will implement a similar stack, but with an alternative Web Server – NGINX, which is also very popular and widely used by many websites in the Internet.
 
 Side Self Study
 1. Make yourself familiar with basic SQL syntax and most commonly used commands
 2. Be comfortable using not only VIM, but also Nano editor as well, get to know basic Nano commands
-
-Instructions On How To Submit Your Work For Review And Feedback To submit your work for review and feedback – follow this instruction.
 
 ## Step 0 – Preparing prerequisites
 
