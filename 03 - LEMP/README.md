@@ -452,15 +452,13 @@ After confirming that you have valid data in your test table, you can exit the M
 mysql> exit
 ```
 
-Now you can create a PHP script that will connect to MySQL and query for your content. Create a new PHP file in your custom web 
-root directory using your preferred editor. We’ll use vi for that:
+Now you can create a PHP script that will connect to MySQL and query for your content. Create a new PHP file in your custom web root directory using your preferred editor. We’ll use vi for that:
 
 ```
 nano /var/www/projectLEMP/todo_list.php
 ```
 
-The following PHP script connects to the MySQL database and queries for the content of the todo_list table, displays the results in
-a list. If there is a problem with the database connection, it will throw an exception.
+The following PHP script connects to the MySQL database and queries for the content of the todo_list table, displays the results in a list. If there is a problem with the database connection, it will throw an exception.
 
 Copy this content into your todo_list.php script:
 
@@ -484,11 +482,9 @@ try {
 }
 ```
 
-
 Save and close the file when you are done editing.
 
-You can now access this page in your web browser by visiting the domain name or public IP address configured for your website, 
-followed by /todo_list.php:
+You can now access this page in your web browser by visiting the domain name or public IP address configured for your website, followed by /todo_list.php:
 
 
 ```
@@ -497,11 +493,9 @@ http://<Public_domain_or_IP>/todo_list.php
 
 You should see a page like this, showing the content you’ve inserted in your test table:
 
-![projje2-s](https://user-images.githubusercontent.com/85270361/210118271-529eb3c8-9bc2-4b05-b3c7-7d6553405fb9.PNG)
-
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/03%20-%20LEMP/images/35.png)
 
 That means your PHP environment is ready to connect and interact with your MySQL server.
 
 Congratulations!
-In this guide, we have built a flexible foundation for serving PHP websites and applications to your visitors, using Nginx as web
-server and MySQL as database management system.
+In this guide, we have built a flexible foundation for serving PHP websites and applications to your visitors, using Nginx as web server and MySQL as database management system.
