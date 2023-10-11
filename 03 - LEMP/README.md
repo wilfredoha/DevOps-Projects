@@ -34,17 +34,11 @@ sudo systemctl status nginx
 ```
 ![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/03%20-%20LEMP/images/26.png)	
 
-If it is green and running, then you did everything correctly – you have just launched your first Web Server in the Cloud!
+If it is green and running, then you did everything correctly
 
-Before we can receive any traffic by our Web Server, we need to open TCP port 80 which is default port that web brousers use to 
-access web pages in the Internet.
+Before we can receive any traffic by our Web Server, we need to open TCP port 80 which is default port that web browsers use to access web pages in the Internet.
 
-As we know, we have TCP port 22 open by default on our EC2 machine to access it via SSH, so we need to add a rule to EC2 
-configuration to open inbound connection through port 80:
-
-
-
-Our server is running and we can access it locally and from the Internet (Source 0.0.0.0/0 means ‘from any IP address’).
+>You can use the same security gropu used in [01 - AWS - EC2](https://github.com/wilfredoha/DevOps-Projects/tree/main/01%20-%20AWS%20-%20EC2). If you can´t connect check if you still have the same IP. 
 
 First, let us try to check how we can access it locally in our Ubuntu shell, run:
 
@@ -54,13 +48,11 @@ or
 curl http://127.0.0.1:80
 ```
 
-These 2 commands above actually do pretty much the same – they use ‘curl’ command to request our Nginx on port 80 (actually you
-can even try to not specify any port – it will work anyway). The difference is that: in the first case we try to access our server 
-via DNS name and in the second one – by IP address (in this case IP address 127.0.0.1 corresponds to DNS name ‘localhost’ and
-the process of converting a DNS name to IP address is called "resolution"). We will touch DNS in further lectures and projects.
+These 2 commands above actually do pretty much the same – they use ‘curl’ command to request our Nginx on port 80 (actually you can even try to not specify any port – it will work anyway). The difference is that: in the first case we try to access our server via DNS name and in the second one – by IP address (in this case IP address 127.0.0.1 corresponds to DNS name ‘localhost’ and the process of converting a DNS name to IP address is called "resolution"). We will touch DNS in further lectures and projects.
 
-As an output you can see some strangely formatted test, do not worry, we just made sure that our Nginx web service responds to
-‘curl’ command with some payload.
+![Image](https://github.com/wilfredoha/DevOps-Projects/blob/main/03%20-%20LEMP/images/27.png)	
+
+As an output you can see some strangely formatted test, do not worry, we just made sure that our Nginx web service responds to ‘curl’ command with some payload.
 
 Now it is time for us to test how our Nginx server can respond to requests from the Internet.
 Open a web browser of your choice and try to access following url
