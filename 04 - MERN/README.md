@@ -9,7 +9,7 @@
 
 ![mern](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/Mern.png)
 
-As shown on the illustration above, a user interacts with the ReactJS UI components at the application front-end residing in the browser. This frontend is served by the application backend residing in a server, through ExpressJS running on top of NodeJS.
+Euser interact with the ReactJS UI components at the application front-end residing in the browser. This frontend is served by the application backend residing in a server, through ExpressJS running on top of NodeJS.
 
 Any interaction that causes a data change request is sent to the NodeJS based Express server, which grabs data from the MongoDB database if required, and returns the data to the frontend of the application, which is then presented to the user.
 
@@ -21,15 +21,12 @@ Side Self Study
 4. Explore what RESTful API is and what it is used for in Web development.
 5. Read what Cascading Style Sheets (CSS) is used for and browse basic syntax and properties.
 
-Instructions On How To Submit Your Work For Review And Feedback
-To submit your work for review and feedback – follow this instruction.
-
 # Step 0 – Preparing prerequisites
 In order to complete this project you will need an AWS account and a virtual server with Ubuntu Server OS.
 
-If you do not have an AWS account – go back to Project 1 Step 0 to sign in to AWS free tier account and create a new EC2 Instance of t2.nano family with Ubuntu Server 20.04 LTS (HVM) image. Remember, you can have multiple EC2 instances, but make sure you STOP the ones you are not working with at the moment to save available free hours.
+If you do not have an AWS account – go back to [AWS](https://github.com/wilfredoha/DevOps-Projects/tree/main/01%20-%20AWS%20-%20EC2) to sign in to AWS free tier account and create a new EC2 Instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM) image. Remember, you can have multiple EC2 instances, but make sure you STOP the ones you are not working with at the moment to save available free hours.
 
-Hint #1: When you create your EC2 Instances, you can add Tag "Name" to it with a value that corresponds to a current project you are working on – it will be reflected in the name of the EC2 Instance. Like this:
+>Hint #1: When you create your EC2 Instances, you can add Tag "Name" to it with a value that corresponds to a current project you are working on – it will be reflected in the name of the EC2 Instance. Like this:
 
 
 ![pro3](https://user-images.githubusercontent.com/85270361/210118546-bead7609-5dea-4538-86f6-2e69c17408cc.PNG)
