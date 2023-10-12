@@ -374,11 +374,13 @@ Allow access to the MongoDB database from anywhere (Not secure, but it is ideal 
 
 >IMPORTANT NOTE: In the image below, make sure you change the time of deleting the entry from 6 Hours to 1 Week
 
-![5004](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/atlas_mongo_access_anywhere.png)
+![mongo4](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/atlas_mongo_access_anywhere.png)
 
 Create a MongoDB database and collection inside mLab
 
-![5005](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/add_your_own_data.png)
+![momgo5](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/add_your_own_data.png)
+
+![mongo6](https://github.com/wilfredoha/DevOps-Projects/blob/f184795f8ab55e35218120062fc640b179032bcf/04%20-%20MERN/images/mongo_deploy_6.png)
 
 In the index.js file, we specified process.env to access environment variables, but we have not yet created this file. So we need to do that now.
 
