@@ -977,7 +977,7 @@ npm run dev
 Assuming no errors when saving all these files, our To-Do app should be ready and fully functional with the functionality discussed earlier: creating a task, deleting a task and viewing all your tasks.
 
 
-![5012](https://user-images.githubusercontent.com/85270361/210132689-3bccdc9b-0dcd-47e9-b1eb-008e05505d47.PNG)
+![todo](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/Todo.png)
 
 
 Congratulations
