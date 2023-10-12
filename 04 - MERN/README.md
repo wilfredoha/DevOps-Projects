@@ -360,6 +360,11 @@ The next piece of our application will be the MongoDB Database
 
 We need a database where we will store our data. For this we will make use of mLab. mLab provides MongoDB database as a service solution [(DBaaS)]https://en.wikipedia.org/wiki/Cloud_database(), so to make life easy, you will need to sign up for a shared clusters free account, which is ideal for our use case. Sign up [here](https://www.mongodb.com/atlas-signup-from-mlab). Follow the sign up process, select AWS as the cloud provider, and choose a region near you.
 
+![mongo1](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/mongo_deploy_1.png)
+
+![mongo2](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/mongo_deploy_2.png)
+
+![mongo3](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/mongo_deploy_3.png)
 
 Allow access to the MongoDB database from anywhere (Not secure, but it is ideal for testing)
 
