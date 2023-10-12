@@ -360,15 +360,12 @@ The next piece of our application will be the MongoDB Database
 
 We need a database where we will store our data. For this we will make use of mLab. mLab provides MongoDB database as a service solution [(DBaaS)]https://en.wikipedia.org/wiki/Cloud_database(), so to make life easy, you will need to sign up for a shared clusters free account, which is ideal for our use case. Sign up [here](https://www.mongodb.com/atlas-signup-from-mlab). Follow the sign up process, select AWS as the cloud provider, and choose a region near you.
 
-Complete a get started checklist as shown on the image below
-
-![5003](https://user-images.githubusercontent.com/85270361/210130940-3d8a93d0-d7e1-46d6-87bc-57deaa5ac417.PNG)
 
 Allow access to the MongoDB database from anywhere (Not secure, but it is ideal for testing)
 
 >IMPORTANT NOTE: In the image below, make sure you change the time of deleting the entry from 6 Hours to 1 Week
 
-![5004](https://user-images.githubusercontent.com/85270361/210130965-09bfdbb5-8ca1-46ad-bc10-37d0a8ac54db.PNG)
+![5004](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/atlas_mongo_access_anywhere.png)
 
 Create a MongoDB database and collection inside mLab
 
