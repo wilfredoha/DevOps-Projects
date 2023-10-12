@@ -178,7 +178,7 @@ node index.js
 
 If every thing goes well, you should see Server running on port 5000 in your terminal.
 
-![5000](https://user-images.githubusercontent.com/85270361/210130555-4322307c-3f48-4ff5-afc2-06a2b389cd94.PNG)
+![5000](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/node_index.png)
 
 Now we need to open this port in EC2 Security Groups. Refer to Project 1 Step 1 – Installing the Nginx Web Server. There we created an inbound rule to open TCP port 80, you need to do the same for port 5000, like this:
 
