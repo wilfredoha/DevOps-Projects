@@ -362,7 +362,11 @@ We need a database where we will store our data. For this we will make use of mL
 
 ![mongo1](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/mongo_deploy_1.png)
 
+Create a new user, enter username and password
+
 ![mongo2](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/mongo_deploy_2.png)
+
+Add your system IP to both the cloud and local environment, then finish and close.
 
 ![mongo3](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/mongo_deploy_3.png)
 
