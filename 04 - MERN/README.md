@@ -261,7 +261,7 @@ Now comes the interesting part, since the app is going to make use of Mongodb wh
 
 A model is at the heart of JavaScript based applications, and it is what makes it interactive.
 
-We will also use models to define the database schema . This is important so that we will be able to define the fields stored in each Mongodb document. (Seems like a lot of information, but not to worry, everything will become clear to you over time. I promise!!!)
+We will also use models to define the database schema. This is important so that we will be able to define the fields stored in each Mongodb document. (Seems like a lot of information, but not to worry, everything will become clear to you over time.)
 
 In essence, the Schema is a blueprint of how the database will be constructed, including other data fields that may not be required to be stored in the database. These are known as virtual properties
 
