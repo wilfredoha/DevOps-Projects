@@ -981,6 +981,4 @@ Assuming no errors when saving all these files, our To-Do app should be ready an
 
 
 Congratulations
-In this Project #3 you have created a simple To-Do and deployed it to MERN stack. You wrote a frontend application using React.js
-that communicates with a backend application written using Expressjs. You also created a Mongodb backend for storing tasks in a
-database.
+In this Project you have created a simple To-Do and deployed it to MERN stack. You wrote a frontend application using React.js that communicates with a backend application written using Expressjs. You also created a Mongodb backend for storing tasks in a database.
