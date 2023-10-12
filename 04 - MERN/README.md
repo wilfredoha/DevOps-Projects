@@ -393,27 +393,22 @@ vi .env
 
 Add the connection string to access the database in it, just as below:
 
+```
+DB = 'mongodb+srv://<username>:<password>@<network-address>/<dbname>?retryWrites=true&w=majority'
+```
+Ensure to update <username>, <password>, <network-address> and <database> according to your setup
+
+Here is how to get your connection string
+
 ![mongo7](https://github.com/wilfredoha/DevOps-Projects/blob/f184795f8ab55e35218120062fc640b179032bcf/04%20-%20MERN/images/get_conn_str_1.png)
 
 ![mongo8](https://github.com/wilfredoha/DevOps-Projects/blob/f184795f8ab55e35218120062fc640b179032bcf/04%20-%20MERN/images/get_conn_str_2.png)
 
+Copy the connection string
+
 ![momgo9](https://github.com/wilfredoha/DevOps-Projects/blob/f184795f8ab55e35218120062fc640b179032bcf/04%20-%20MERN/images/get_conn_str_3.png)
 
-```
-DB = 'mongodb+srv://<username>:<password>@<network-address>/<dbname>?retryWrites=true&w=majority'
-```
-
-Ensure to update <username>, <password>, <network-address> and <database> according to your setup
-
-Here is how to get your connection string
-  
-![5006](https://user-images.githubusercontent.com/85270361/210131129-c22696a1-76bb-41cf-a6cf-5028c7ab6845.PNG)
-
-  
-![50007](https://user-images.githubusercontent.com/85270361/210131217-788a794c-8e51-49fa-8a00-35e7b8982e16.PNG)
-
-
- Now we need to update the index.js to reflect the use of .env so that Node.js can connect to the database.
+Now we need to update the index.js to reflect the use of .env so that Node.js can connect to the database.
 
 Simply delete existing content in the file, and update it with the entire code below.
 
