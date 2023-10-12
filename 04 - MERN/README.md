@@ -195,7 +195,7 @@ Quick reminder how to get your server’s Public IP and public DNS name:
 2) Run curl -s http://169.254.169.254/latest/meta-data/public-ipv4 for Public IP address or 
 3) curl -s http://169.254.169.254/latest/meta-data/public-hostname for Public DNS name.
 
-![5002](https://user-images.githubusercontent.com/85270361/210130631-8edbc957-719f-4323-ae55-b9df9614899e.PNG)
+![5002](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/welcome_express.png)
 
 Routes
 There are three actions that our To-Do application needs to be able to do:
