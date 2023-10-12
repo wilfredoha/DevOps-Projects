@@ -546,13 +546,13 @@ npm install nodemon --save-dev
 
 ```
 "scripts": {
-"start": "node index.js",
-"start-watch": "nodemon index.js",
-"dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
+  "start": "node index.js",
+  "start-watch": "nodemon index.js",
+  "dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
 },
 ```
 
-![5011](https://user-images.githubusercontent.com/85270361/210131756-fea4a40b-e23c-4937-997f-bc8d022bf763.PNG)
+![package_json_m](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/package_json_modification.png)
 
 Configure Proxy in package.json
 1. Change directory to ‘client’
