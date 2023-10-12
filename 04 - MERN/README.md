@@ -369,7 +369,7 @@ Allow access to the MongoDB database from anywhere (Not secure, but it is ideal 
 
 Create a MongoDB database and collection inside mLab
 
-![5005](https://user-images.githubusercontent.com/85270361/210130999-ae626111-3e54-4273-a194-e447662f19e0.PNG)
+![5005](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/add_your_own_data.png)
 
 In the index.js file, we specified process.env to access environment variables, but we have not yet created this file. So we need to do that now.
 
