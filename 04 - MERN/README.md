@@ -393,6 +393,12 @@ vi .env
 
 Add the connection string to access the database in it, just as below:
 
+![mongo7](https://github.com/wilfredoha/DevOps-Projects/blob/f184795f8ab55e35218120062fc640b179032bcf/04%20-%20MERN/images/get_conn_str_1.png)
+
+![mongo8](https://github.com/wilfredoha/DevOps-Projects/blob/f184795f8ab55e35218120062fc640b179032bcf/04%20-%20MERN/images/get_conn_str_2.png)
+
+![momgo9](https://github.com/wilfredoha/DevOps-Projects/blob/f184795f8ab55e35218120062fc640b179032bcf/04%20-%20MERN/images/get_conn_str_3.png)
+
 ```
 DB = 'mongodb+srv://<username>:<password>@<network-address>/<dbname>?retryWrites=true&w=majority'
 ```
