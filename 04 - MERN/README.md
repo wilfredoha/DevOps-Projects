@@ -49,7 +49,7 @@ sudo apt update
 Upgrade ubuntu
 
 ```
-sudo apt upgrade
+sudo apt upgrade -y
 ```
 
 Lets get the location of Node.js software from Ubuntu repositories.
@@ -78,6 +78,8 @@ Verify the node installation with the command below
 ```
 npm -v
 ```
+
+![node_version](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/node_version.png)
 
 Application Code Setup
 Create a new directory for your To-Do project:
