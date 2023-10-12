@@ -489,15 +489,19 @@ Now open your Postman, create a POST request to the API http://<PublicIP-or-Publ
 
 Note: make sure your set header key Content-Type as application/json
  
-![5008](https://user-images.githubusercontent.com/85270361/210131561-9316f8f5-2112-4f09-846a-544677328817.PNG)
+![postman1](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/postman1.png)
 
 Check the image below:
 
-![5009](https://user-images.githubusercontent.com/85270361/210131585-627646c4-a59e-48c3-8edd-0354e4ac2431.PNG)
+![postman2](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/postman2.png)
 
 Create a GET request to your API on http://<PublicIP-or-PublicDNS>:5000/api/todos. This request retrieves all existing records from out To-do application (backend requests these records from the database and sends it us back as a response to GET request).
     
-![5010](https://user-images.githubusercontent.com/85270361/210131610-9c7c4544-1e2b-40f3-b2b6-bcd389857b0d.PNG)
+![postman3](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/postman3.png)
+
+After this you can check the data uploaded
+
+![checking_atlas](https://github.com/wilfredoha/DevOps-Projects/blob/main/04%20-%20MERN/images/checking_atlas.png)
 
 Optional task: Try to figure out how to send a DELETE request to delete a task from out To-Do list.
 
