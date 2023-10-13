@@ -12,7 +12,7 @@ In their communication, each machine has its own role: the machine sending reque
 
 A simple diagram of Web Client-Server architecture is presented below:
 
-![5014](https://user-images.githubusercontent.com/85270361/210135156-3b6a7fef-2e91-4ba5-9e7f-fe0898c05522.PNG)
+![client-server](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/client_sever.png)
 
 
 In the example above, a machine that is trying to access a Web site using Web browser or simply ‘curl’ command is a client and it 
