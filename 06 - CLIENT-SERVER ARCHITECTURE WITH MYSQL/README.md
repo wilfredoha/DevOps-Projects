@@ -73,7 +73,27 @@ Server B name - `mysql client`
 
 2. On mysql server Linux Server install MySQL Server software.
 
->Interesting fact: MySQL is an open-source relational database management system. Its name is a combination of "My", the name of co-founder Michael Widenius’s daughter, and "SQL", the abbreviation for Structured Query Language.
+```
+sudo apt update
+```
+
+```
+sudo apt upgrade -y
+```
+
+```
+sudo apt install mysql-server -y
+```
+
+```
+sudo systemctl start mysql.service
+```
+
+```
+sudo systemctl status mysql.service
+```
+
+![status_mysql](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/statsu_mysql.png)
 
 3. On mysql client Linux Server install MySQL Client software.
 
