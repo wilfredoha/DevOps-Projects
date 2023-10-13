@@ -143,7 +143,7 @@ mysql> exit;
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 
-1[bin_address](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/bin_address.png)
+![bin_address](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/bin_address.png)
 
 
 
