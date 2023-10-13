@@ -373,6 +373,8 @@ You are supposed to know how to do it, if you have forgotten – refer to Projec
 
 Your Sercurity group shall look like this:
 
+![sec_group](https://github.com/wilfredoha/DevOps-Projects/blob/main/05%20-%20MEAN/images/sec_group.png)
+
 Now you can access our Book Register web application from the Internet with a browser using Public IP address or Public DNS name.
 
 Quick reminder how to get your server’s Public IP and public DNS name:
