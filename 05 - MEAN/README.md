@@ -365,8 +365,6 @@ curl -s http://localhost:3300
 
 It shall return an HTML page, it is hardly readable in the CLI, but we can also try and access it from the Internet.
 
-![book_page](https://github.com/wilfredoha/DevOps-Projects/blob/main/05%20-%20MEAN/images/book_page.png)
-
 For this – you need to open TCP port 3300 in your AWS Web Console for your EC2 Instance.
 
 You are supposed to know how to do it, if you have forgotten – refer to Project 1 (Step 1 — Installing Apache and Updating the Firewall)
@@ -385,7 +383,7 @@ You can find it in your AWS web console in EC2 details
 
 This is how your Web Book Register Application will look like in browser:
 
-
+![book_page](https://github.com/wilfredoha/DevOps-Projects/blob/main/05%20-%20MEAN/images/book_page.png)
 
 Congratulations!
 You have now completed all ‘PBL Progressive’ projects and are ready to move on to more complex and fun ‘PBL Professional’ projects!!!
