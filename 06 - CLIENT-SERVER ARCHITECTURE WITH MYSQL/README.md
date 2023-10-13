@@ -62,7 +62,7 @@ Another simple way to get a server’s IP address is to use a simple diagnostic 
 TASK – Implement a Client Server Architecture using MySQL Database Management System (DBMS).
 To demonstrate a basic client-server using MySQL Relational Database Management System (RDBMS), follow the below instructions
 
-1. Create and configure two Linux-based virtual servers (EC2 instances in AWS).
+1. Create and configure two Linux-based virtual servers (EC2 instances in AWS [01 - AWS - EC2](https://github.com/wilfredoha/DevOps-Projects/tree/main/01%20-%20AWS%20-%20EC2)).
 
 ```
 Server A name - `mysql server`
