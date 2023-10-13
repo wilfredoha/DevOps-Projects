@@ -69,6 +69,8 @@ Server A name - `mysql server`
 Server B name - `mysql client`
 ```
 
+![servers_runing](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/servers_runing.png)
+
 2. On mysql server Linux Server install MySQL Server software.
 
 >Interesting fact: MySQL is an open-source relational database management system. Its name is a combination of "My", the name of co-founder Michael Widenius’s daughter, and "SQL", the abbreviation for Structured Query Language.
