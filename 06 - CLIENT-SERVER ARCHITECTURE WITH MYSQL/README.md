@@ -1,8 +1,8 @@
 # CLIENT-SERVER ARCHITECTURE WITH MYSQL
 
-Understanding Client-Server Architecture
-
 ![client-server_mysql](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/client-server_mysql.png)
+
+## Understanding Client-Server Architecture
 
 As you proceed your journey into the world of IT, you will begin to realise that certain concepts apply to many other areas. One of such concepts is – Client-Server architecture.
 
