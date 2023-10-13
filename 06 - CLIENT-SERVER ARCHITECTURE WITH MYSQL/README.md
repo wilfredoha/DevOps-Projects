@@ -113,17 +113,21 @@ mysql -u root -p
 
 >you will be asked to enter the password
 
-```
-sudo mysql -p
-```
+Create a new DataBase
 
 ```
 mysql> CREATE DATABASE client;
 ```
 
+Create a new User
+
 ```
 mysql> CREATE USER 'client'@'3.95.204.160' IDENTIFIED BY 'client';
 ```
+
+>The IP at user creation corresponds to the mysql client server public IP
+
+Grant privileges to the new user
 
 ```
 mysql> GRANT ALL PRIVILEGES ON client.client  TO 'client'@'3.95.204.160';
@@ -140,6 +144,8 @@ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 
 1[bin_address](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/bin_address.png)
+
+
 
 3. On mysql client Linux Server install MySQL Client software.
 
