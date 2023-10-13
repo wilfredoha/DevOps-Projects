@@ -115,6 +115,20 @@ mysql -u root -p
 
 3. On mysql client Linux Server install MySQL Client software.
 
+```
+sudo apt update
+```
+
+```
+sudo apt upgrade -y
+```
+
+```
+sudo apt install mysql-client -y
+```
+
+![mysql_version](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/mysql_version.png)
+
 4. By default, both of your EC2 virtual servers are located in the same local virtual network, so they can communicate to each other using local IP addresses. Use mysql server's local IP address to connect from mysql client. MySQL server uses TCP port 3306 by default, so you will have to open it by creating a new entry in ‘Inbound rules’ in ‘mysql server’ Security Groups. 
 For extra security, do not allow all IP addresses to reach your ‘mysql server’ – allow access only to the specific local IP address of your ‘mysql client’.
 
