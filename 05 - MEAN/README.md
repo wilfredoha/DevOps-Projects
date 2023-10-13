@@ -11,21 +11,16 @@ Side Self Study
 2. Read about Load Balancing, get yourself familiar with different types and techniques of traffic load balancing.
 3. Practice in editing simple web forms with HTML + CSS + JS
 
-## Step 0 – Preparing prerequisites
+# Preparing prerequisites
 In order to complete this project you will need an AWS account and a virtual server with Ubuntu Server OS.
 
 If you do not have an AWS account – go back to [01 - AWS - EC2](https://github.com/wilfredoha/DevOps-Projects/tree/main/01%20-%20AWS%20-%20EC2) to sign in to AWS free tier account ans create a new EC2 Instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM) image. Remember, you can have multiple EC2 instances, but make sure you STOP the ones you are not working with at the moment to save available free hours.
-
->Hint: In previous projects we used different tools to connect to an EC2 instance, but if you do not want to install or launch anything outside of AWS, you can open youc CLI straight from Web Console in AWS, like this:
-
-![5013](https://user-images.githubusercontent.com/85270361/210133716-47e26536-6479-440d-9c15-981cab3bbaac.PNG)
 
 Task
 In this assignment you are going to implement a simple Book Register web form using MEAN stack.
 
 Step 1: Install NodeJs
-Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js is used in this tutorial to set up the Express
-routes and AngularJS controllers.
+Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js is used in this tutorial to set up the Express routes and AngularJS controllers.
 
 Update ubuntu
 
@@ -36,7 +31,7 @@ sudo apt update
 Upgrade ubuntu
 
 ```
-sudo apt upgrade
+sudo apt upgrade -y
 ```
 
 Add certificates
@@ -53,12 +48,8 @@ Install NodeJS
 sudo apt install -y nodejs
 ```
 
-Step 2: Install MongoDB
-MongoDB stores data in flexible, JSON-like documents. Fields in a database can vary from document to document and data structure can
-be changed over time. For our example application, we are adding book records to MongoDB that contain book name, isbn number, author,
-and number of pages.
-
-mages/WebConsole.gif
+# Install MongoDB
+MongoDB stores data in flexible, JSON-like documents. Fields in a database can vary from document to document and data structure can be changed over time. For our example application, we are adding book records to MongoDB that contain book name, isbn number, author, and number of pages.
 
 ```
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
@@ -87,6 +78,8 @@ Verify that the service is up and running
 sudo systemctl status mongodb
 ```
 
+![mongodb_status](https://github.com/wilfredoha/DevOps-Projects/blob/main/05%20-%20MEAN/images/mongodb_status.png)
+
 Install npm – Node package manager.
 
 ```
@@ -96,7 +89,6 @@ sudo apt install -y npm
 Install body-parser package
 
 We need ‘body-parser’ package to help us process JSON files passed in requests to the server.
-
 
 ```
 sudo npm install body-parser
@@ -137,13 +129,9 @@ app.listen(app.get('port'), function() {
 
 # INSTALL EXPRESS AND SET UP ROUTES TO THE SERVER
 
-Step 3: Install Express and set up routes to the server
+Express is a minimal and flexible Node.js web application framework that provides features for web and mobile applications. We will use Express in to pass book information to and from our MongoDB database.
 
-Express is a minimal and flexible Node.js web application framework that provides features for web and mobile applications. We will
-use Express in to pass book information to and from our MongoDB database.
-
-We also will use Mongoose package which provides a straight-forward, schema-based solution to model your application data. We will
-use Mongoose to establish a schema for the database to store data of our book register.
+We also will use Mongoose package which provides a straight-forward, schema-based solution to model your application data. We will use Mongoose to establish a schema for the database to store data of our book register.
 
 ```
 sudo npm install express mongoose
@@ -233,9 +221,8 @@ var Book = mongoose.model('Book', bookSchema);
 module.exports = mongoose.model('Book', bookSchema);
 ```
 
-Step 4 – Access the routes with AngularJS
-AngularJS provides a web framework for creating dynamic views in your web applications. In this tutorial, we use AngularJS to 
-connect our web page with Express and perform actions on our book register.
+# Access the routes with AngularJS
+AngularJS provides a web framework for creating dynamic views in your web applications. In this tutorial, we use AngularJS to connect our web page with Express and perform actions on our book register.
 
 Change the directory back to ‘Books’
 
@@ -305,7 +292,6 @@ vi index.html
 
 Copy and paste the code below into index.html file.
 
-
 ```
 <!doctype html>
 <html ng-app="myApp" ng-controller="myCtrl">
@@ -371,8 +357,7 @@ Start the server by running this command:
 node server.js
 ```
 
-The server is now up and running, we can connect it via port 3300. You can launch a separate Putty or SSH console to test what 
-curl command returns locally.
+The server is now up and running, we can connect it via port 3300. You can launch a separate Putty or SSH console to test what curl command returns locally.
 
 ```
 curl -s http://localhost:3300
@@ -380,10 +365,11 @@ curl -s http://localhost:3300
 
 It shall return an HTML page, it is hardly readable in the CLI, but we can also try and access it from the Internet.
 
+![book_page](https://github.com/wilfredoha/DevOps-Projects/blob/main/05%20-%20MEAN/images/book_page.png)
+
 For this – you need to open TCP port 3300 in your AWS Web Console for your EC2 Instance.
 
-You are supposed to know how to do it, if you have forgotten – refer to Project 1 (Step 1 — Installing Apache and Updating the
-Firewall)
+You are supposed to know how to do it, if you have forgotten – refer to Project 1 (Step 1 — Installing Apache and Updating the Firewall)
 
 Your Sercurity group shall look like this:
 
