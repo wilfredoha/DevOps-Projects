@@ -52,7 +52,8 @@ Another simple way to get a server’s IP address is to use a simple diagnostic 
 
 ![ping](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/client_sever_ping.png)
 
-Side Self Study
-Read about ping and traceroute network diagnostic utilities. Be able to make sense out of the results of using these tools.
-Refresh your knowledge of basic SQL commands, be able to perform simple SHOW, CREATE, DROP, SELECT and INSERT SQL queries.
+### Side Self Study
+
+- Read about ping and traceroute network diagnostic utilities. Be able to make sense out of the results of using these tools.
+- Refresh your knowledge of basic SQL commands, be able to perform simple SHOW, CREATE, DROP, SELECT and INSERT SQL queries.
 
