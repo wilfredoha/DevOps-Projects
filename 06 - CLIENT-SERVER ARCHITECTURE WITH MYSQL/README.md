@@ -99,9 +99,3 @@ Show databases;
 
 If you see an output similar to the below image, then you have successfully completed this project – you have deloyed a fully functional MySQL Client-Server set up.
 Well Done! You are getting there gradually. You can further play around with this set up and practice in creating/dropping databases & tables and inserting/selecting records to and from them.
-
-Congratulations!
-
-![5020](https://user-images.githubusercontent.com/85270361/210136618-f3738310-258f-4848-ab6d-710a06cce2e8.PNG)
-
-
