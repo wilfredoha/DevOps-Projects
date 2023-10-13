@@ -137,16 +137,6 @@ mysql> GRANT ALL PRIVILEGES ON client.client  TO 'client'@'3.95.204.160';
 mysql> exit;
 ```
 
-> Now we need to give access to our new user(client)
-
-```
-sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
-```
-
-![bin_address](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/bin_address.png)
-
-
-
 3. On mysql client Linux Server install MySQL Client software.
 
 ```
@@ -171,13 +161,12 @@ For extra security, do not allow all IP addresses to reach your ‘mysql server�
 5. You might need to configure MySQL server to allow connections from remote hosts.
 
 ```
-sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 
-Replace ‘127.0.0.1’ to ‘0.0.0.0’ like this:
+![bin_address](https://github.com/wilfredoha/DevOps-Projects/blob/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL/images/bin_address.png)
 
-![5018](https://user-images.githubusercontent.com/85270361/210136418-f4832b77-89d4-4e65-8287-6e73a338a65a.PNG)
-
+>Replace '127.0.0.1' to '0.0.0.0' like you see in the image
 
 6. From mysql client Linux Server connect remotely to mysql server Database Engine without using SSH. You must use the mysql utility to perform this action.
 
