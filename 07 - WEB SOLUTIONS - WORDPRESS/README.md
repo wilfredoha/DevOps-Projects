@@ -45,7 +45,7 @@ Note: for Ubuntu server, when connecting to it via SSH/Putty or any other tool, 
 Step 1 — Prepare a Web Server
 
 1. Launch an EC2 instance that will serve as "Web Server". Create 3 volumes in the same AZ as your Web Server EC2, each of 10 GiB.
-Learn How to Add EBS Volume to an EC2 instance here
+Learn How to Add EBS Volume to an EC2 instance [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html)
 
 ![5022](https://user-images.githubusercontent.com/85270361/210136900-8369cbb5-47fc-4ea1-a8a0-4746881fab44.PNG)
 
