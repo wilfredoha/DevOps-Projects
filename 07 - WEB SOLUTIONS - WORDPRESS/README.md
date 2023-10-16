@@ -52,19 +52,20 @@ Learn How to Add EBS Volume to an EC2 instance [here](https://docs.aws.amazon.co
 
 1. Attach all three volumes one by one to your Web Server EC2 instance
 
-![5023](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/attach_01.png)
+![attach01](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/attach_01.png)
 
-![5023](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/attach_02.png)
+![attach02](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/attach_02.png)
 
 2. Open up the Linux terminal to begin configuration
 
-3. Use lsblk command to inspect what block devices are attached to the server. Notice names of your newly created devices. All devices
-in Linux reside in /dev/ directory. Inspect it with ls /dev/ and make sure you see all 3 newly created block devices there – their 
+3. Use lsblk command to inspect what block devices are attached to the server. Notice names of your newly created devices. All devices in Linux reside in /dev/ directory. Inspect it with ls /dev/ and make sure you see all 3 newly created block devices there – their 
 names will likely be xvdf, xvdh, xvdg.
 
+```
+lsblk
+```
 
-![5024](https://user-images.githubusercontent.com/85270361/210137484-e3928617-0f73-42c1-bc76-bf9d86d60710.PNG)
-
+![lsblk](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/lsblk.png)
 
 4. Use df -h command to see all mounts and free space on your server
 
