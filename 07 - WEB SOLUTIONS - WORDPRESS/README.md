@@ -90,7 +90,7 @@ Now,  your changes has been configured succesfuly, exit out of the gdisk console
 
 5. Use lsblk utility to view the newly configured partition on each of the 3 disks.
 
-![5025](https://user-images.githubusercontent.com/85270361/210137616-558c1857-6fca-40e4-a833-f4605fcd46ca.PNG)
+![lsblk.checkgdisk](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/lsblk.checkgdisk.png)
 
 
 6. Install lvm2 package using sudo yum install lvm2. Run sudo lvmdiskscan command to check for available partitions.
