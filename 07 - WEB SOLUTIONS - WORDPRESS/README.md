@@ -14,7 +14,7 @@ Generally, web, or mobile solutions are implemented based on what is called the 
 Three-tier Architecture is a client-server software architecture pattern that comprise of 3 separate layers.
 
 
-![three_tier_application](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/three_tier_application.png)
+![three_tier_application](https://user-images.githubusercontent.com/85270361/210136746-989083fe-d67f-4454-97d5-5f7cc8f921f3.PNG)
 
 
 1. Presentation Layer (PL): This is the user interface such as the client server or browser on your laptop.
