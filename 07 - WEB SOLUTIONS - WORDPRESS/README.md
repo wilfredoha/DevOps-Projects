@@ -47,7 +47,7 @@ Step 1 — Prepare a Web Server
 1. Launch an EC2 instance that will serve as "Web Server". Create 3 volumes in the same AZ as your Web Server EC2, each of 10 GiB.
 Learn How to Add EBS Volume to an EC2 instance [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html)
 
-![5022](https://user-images.githubusercontent.com/85270361/210136900-8369cbb5-47fc-4ea1-a8a0-4746881fab44.PNG)
+![5022](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/creating_3_volumes.png)
 
 
 1. Attach all three volumes one by one to your Web Server EC2 instance
