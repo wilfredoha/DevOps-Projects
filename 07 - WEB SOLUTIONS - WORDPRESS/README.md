@@ -69,6 +69,12 @@ lsblk
 
 4. Use df -h command to see all mounts and free space on your server
 
+```
+df -h
+```
+
+![df-h](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/df%20-h.png)
+
 5. Use gdisk utility to create a single partition on each of the 3 disks
 
 ```
