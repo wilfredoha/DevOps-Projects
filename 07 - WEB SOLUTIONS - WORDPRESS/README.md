@@ -52,8 +52,9 @@ Learn How to Add EBS Volume to an EC2 instance [here](https://docs.aws.amazon.co
 
 1. Attach all three volumes one by one to your Web Server EC2 instance
 
-![5023](https://user-images.githubusercontent.com/85270361/210136972-6c812c34-9dfa-4605-92ec-afb0d7881bbb.PNG)
+![5023](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/attach_01.png)
 
+![5023](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/attach_02.png)
 
 2. Open up the Linux terminal to begin configuration
 
