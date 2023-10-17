@@ -130,7 +130,7 @@ sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1
 sudo vgs
 ```
 
-![5027](https://user-images.githubusercontent.com/85270361/210137794-23e31c97-1f34-469b-b7da-3456fb4e4dcd.PNG)
+![5027](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/vgs_check.png)
 
 
 11. Use lvcreate utility to create 2 logical volumes. apps-lv (Use half of the PV size), and logs-lv Use the remaining space of
