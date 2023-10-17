@@ -231,10 +231,9 @@ sudo systemctl daemon-reload
 ![5032](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/df-h-setup-running.png)
 
 
-Step 2 — Prepare the Database Server
+# Prepare the Database Server
 Launch a second RedHat EC2 instance that will have a role – ‘DB Server’
-Repeat the same steps as for the Web Server, but instead of apps-lv create db-lv and mount it to /db directory instead of
-/var/www/html/.
+Repeat the same steps as for the Web Server, but instead of apps-lv create db-lv and mount it to /db directory instead of /var/www/html/.
 
 Step 3 — Install WordPress on your Web Server EC2
 
@@ -260,7 +259,6 @@ sudo systemctl enable httpd
 sudo systemctl start httpd
 ```
 
-
 4. To install PHP and it’s depemdencies
 
 ```
@@ -284,13 +282,13 @@ sudo systemctl restart httpd
 6. Download wordpress and copy wordpress to var/www/html
 
 ```
-  mkdir wordpress
+  sudo mkdir wordpress
   cd   wordpress
   sudo wget http://wordpress.org/latest.tar.gz
   sudo tar xzvf latest.tar.gz
   sudo rm -rf latest.tar.gz
-  cp wordpress/wp-config-sample.php wordpress/wp-config.php
-  cp -R wordpress /var/www/html/
+  sudo cp wordpress/wp-config-sample.php wordpress/wp-config.php
+  sudo cp -R wordpress /var/www/html/
 ```
 
 
@@ -302,7 +300,7 @@ sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
 sudo setsebool -P httpd_can_network_connect=1
 ```
 
-Step 4 — Install MySQL on your DB Server EC2
+# Install MySQL on your DB Server EC2
 
 ```
 sudo yum update
