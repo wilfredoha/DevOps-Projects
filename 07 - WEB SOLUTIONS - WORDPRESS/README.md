@@ -323,6 +323,12 @@ SHOW DATABASES;
 exit
 ```
 
+```
+sudo nano /etc/my.cnf
+```
+
+![bind](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/access_bind.png)
+
 - Configure WordPress to connect to remote database.
 >Hint: Do not forget to open MySQL port 3306 on DB Server EC2. For extra security, you shall allow access to the DB server ONLY from your Web Server’s IP address, so in the Inbound Rule configuration specify source as /32
 
@@ -341,6 +347,14 @@ sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
 ![test_mysql_connection](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/test_mysql_connection.png)
 
 3. Change permissions and configuration so Apache could use WordPress:
+
+```
+sudo cp wp-config-sample.php wp-config.php
+```
+
+```
+sudo nano wp-config.php
+```
 
 4. Enable TCP port 80 in Inbound Rules configuration for your Web Server EC2 (enable from everywhere 0.0.0.0/0 or from your workstation’s IP)
 
