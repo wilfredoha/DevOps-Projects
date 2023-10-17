@@ -107,5 +107,22 @@ MERN is an acronym that represents a popular software stack used for building we
 ***
 
 ## MEAN
+
+![mean](https://github.com/wilfredoha/DevOps-Projects/blob/main/images/mean.png)
+
+[05 - MEAN](https://github.com/wilfredoha/DevOps-Projects/tree/main/05%20-%20MEAN)
+
+MEAN is an acronym representing a popular software stack for building web applications. Each letter in the acronym corresponds to a key component of the stack. MEAN is well-suited for developing modern, dynamic web applications. Here's a brief overview of each component:
+
+**M - MongoDB**: MongoDB is a NoSQL database that stores data in a flexible, schema-less format, making it particularly well-suited for handling unstructured or semi-structured data. It serves as the database component in the MEAN stack, enabling developers to store and manage data efficiently for web applications.
+
+**E - Express.js**: Express.js is a minimal and flexible Node.js web application framework. It simplifies the process of building robust and scalable web applications by providing a set of features and tools for routing, middleware, and handling HTTP requests and responses. Express.js is the server-side framework of the MEAN stack.
+
+**A - Angular**: Angular is a powerful, open-source JavaScript framework for building dynamic, single-page web applications (SPAs). It provides a structured, component-based architecture for creating interactive user interfaces. Angular is the client-side framework in the MEAN stack, offering a rich, modular, and declarative approach to building web applications.
+
+**N - Node.js**: Node.js is an open-source, server-side JavaScript runtime that enables developers to build scalable and high-performance network applications. It serves as the runtime environment for the Express.js server and allows developers to use JavaScript on both the client and server sides of the application, ensuring consistent code throughout the stack.
+
+***
+
 ## CLIENT-SERVER ARCHITECTURE WITH MYSQL
 ## WEB SOLUTIONS - WORDPRESS
