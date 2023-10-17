@@ -362,6 +362,10 @@ sudo nano wp-config.php
 sudo systemctl restart httpd
 ```
 
+```
+sudo mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf_bckup
+```
+
 4. Enable TCP port 80 in Inbound Rules configuration for your Web Server EC2 (enable from everywhere 0.0.0.0/0 or from your workstation’s IP)
 
 5. Try to access from your browser the link to your WordPress 
@@ -383,10 +387,3 @@ If you see this message – it means your WordPress has successfully connected t
 
   
 Important: Do not forget to STOP your EC2 instances after completion of the project to avoid extra costs.
-
-CONGRATULATIONS!
-You have learned how to configure Linux storage susbystem and have also deployed a full-scale Web Solution using WordPress CMS and
-MySQL RDBMS!
-  
-
-![5070](https://user-images.githubusercontent.com/85270361/210138753-775e4c79-c634-473a-9330-254b209347d1.PNG)
