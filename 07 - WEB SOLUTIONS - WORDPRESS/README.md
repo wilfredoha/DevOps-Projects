@@ -356,6 +356,12 @@ sudo cp wp-config-sample.php wp-config.php
 sudo nano wp-config.php
 ```
 
+![db_conn](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/connection_to_db.png)
+
+```
+sudo systemctl restart httpd
+```
+
 4. Enable TCP port 80 in Inbound Rules configuration for your Web Server EC2 (enable from everywhere 0.0.0.0/0 or from your workstation’s IP)
 
 5. Try to access from your browser the link to your WordPress 
