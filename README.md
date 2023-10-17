@@ -1,6 +1,6 @@
 # DevOps-Projects
 
-![devops](https://github.com/wilfredoha/DevOps-Projects/blob/main/images/devops_2.png)
+![devops](https://github.com/wilfredoha/DevOps-Projects/blob/main/images/devops_2.png){ style="text-align: center" }
 
 DevOps is a set of practices and principles that aim to streamline and automate the software development and IT operations processes. The term "DevOps" is a combination of "Development" (Dev) and "Operations" (Ops), highlighting the collaboration and integration between development and IT operations teams.
 
