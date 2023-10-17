@@ -58,6 +58,16 @@ Amazon Elastic Compute Cloud (EC2) is a core web service provided by Amazon Web 
 
 [02 - LAMP](https://github.com/wilfredoha/DevOps-Projects/tree/main/02%20-%20LAMP)
 
+LAMP is an acronym that represents a popular open-source software stack used for building dynamic and interactive web applications. Each letter in the acronym stands for a key component of the stack. Here's a brief overview of each component:
+
+**L - Linux**: Linux is an open-source operating system that serves as the foundation for the LAMP stack. It provides a stable and secure environment for hosting web applications. Linux distributions like Ubuntu, CentOS, and Debian are commonly used for this purpose.
+
+**A - Apache**: Apache is a widely used web server software. It's known for its reliability, performance, and versatility. Apache serves web pages and manages HTTP requests from web browsers, forwarding them to the appropriate web application for processing.
+
+**M - MySQL**: MySQL is a popular open-source relational database management system (RDBMS). It's used to store and manage data for web applications. MySQL is known for its speed and scalability and is commonly employed for various web-based projects, from small websites to large-scale applications.
+
+**P - PHP**: PHP is a server-side scripting language used for web development. It is embedded within HTML to create dynamic web pages. PHP is versatile and well-suited for building web applications that interact with databases, making it a common choice for LAMP stack developers. However, "P" can also stand for other scripting languages like Python or Perl, depending on the developer's preferences.
+
 ***
 
 ## LEMP
