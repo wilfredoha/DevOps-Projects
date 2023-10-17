@@ -208,10 +208,10 @@ sudo rsync -av /home/recovery/logs/. /var/log
 sudo blkid
 ```
 
-![5030](https://user-images.githubusercontent.com/85270361/210138145-4da8745a-86be-4110-8abd-ee7d6363ba33.PNG)
+![5030](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/blkid.png)
 
 ```
-sudo vi /etc/fstab
+sudo nano /etc/fstab
 ```
 
 Update /etc/fstab in this format using your own UUID and rememeber to remove the leading and ending quotes.
