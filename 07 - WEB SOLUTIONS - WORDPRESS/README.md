@@ -95,8 +95,11 @@ Now,  your changes has been configured succesfuly, exit out of the gdisk console
 
 6. Install lvm2 package using sudo yum install lvm2. Run sudo lvmdiskscan command to check for available partitions.
 
-Note: Previously, in Ubuntu we used apt command to install packages, in RedHat/CentOS a different package manager is used, so we 
-shall use yum command instead.
+>Note: Previously, in Ubuntu we used apt command to install packages, in RedHat/CentOS a different package manager is used, so we shall use yum command instead.
+
+```
+sudo yum install lvm2 -y
+```
 
 7. Use pvcreate utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM
 
@@ -108,7 +111,11 @@ sudo pvcreate /dev/xvdh1
 
 8. Verify that your Physical volume has been created successfully by running sudo pvs
 
-![5026](https://user-images.githubusercontent.com/85270361/210137702-7d0c0151-0cf8-4d61-a1af-a146afc9e26a.PNG)
+```
+sudo pvs
+```
+
+![5026](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/sudo_pvs.png)
 
 
 9. Use vgcreate utility to add all 3 PVs to a volume group (VG). Name the VG webdata-vg
