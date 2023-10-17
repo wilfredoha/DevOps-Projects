@@ -235,8 +235,7 @@ sudo systemctl daemon-reload
 Launch a second RedHat EC2 instance that will have a role – ‘DB Server’
 Repeat the same steps as for the Web Server, but instead of apps-lv create db-lv and mount it to /db directory instead of /var/www/html/.
 
-Step 3 — Install WordPress on your Web Server EC2
-
+# Install WordPress on your Web Server EC2
 
 1. Update the repository
 
@@ -244,13 +243,11 @@ Step 3 — Install WordPress on your Web Server EC2
 sudo yum -y update
 ```
 
-
 2. Install wget, Apache and it’s dependencies
 
 ```
 sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json
 ```
-
 
 3. Start Apache
 
@@ -307,15 +304,14 @@ sudo yum update
 sudo yum install mysql-server
 ```
 
-Verify that the service is up and running by using sudo systemctl status mysqld, if it is not running, restart the service and 
-enable it so it will be running even after reboot:
+Verify that the service is up and running by using sudo systemctl status mysqld, if it is not running, restart the service and enable it so it will be running even after reboot:
 
 ```
 sudo systemctl restart mysqld
 sudo systemctl enable mysqld
 ```
 
-Step 5 — Configure DB to work with WordPress
+- Configure DB to work with WordPress
 
 ```
 sudo mysql
@@ -327,11 +323,10 @@ SHOW DATABASES;
 exit
 ```
 
-Step 6 — Configure WordPress to connect to remote database.
-Hint: Do not forget to open MySQL port 3306 on DB Server EC2. For extra security, you shall allow access to the DB server ONLY 
-from your Web Server’s IP address, so in the Inbound Rule configuration specify source as /32
+- Configure WordPress to connect to remote database.
+>Hint: Do not forget to open MySQL port 3306 on DB Server EC2. For extra security, you shall allow access to the DB server ONLY from your Web Server’s IP address, so in the Inbound Rule configuration specify source as /32
 
-![5034](https://user-images.githubusercontent.com/85270361/210138507-0b3b6372-958b-406a-9672-82f729d26b85.PNG)
+![5034](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/security_g_3306.png)
 
 
 1. Install MySQL client and test that you can connect from your Web Server to your DB server by using mysql-client
