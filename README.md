@@ -71,6 +71,23 @@ LAMP is an acronym that represents a popular open-source software stack used for
 ***
 
 ## LEMP
+
+![lemp](https://github.com/wilfredoha/DevOps-Projects/blob/main/images/lemp.png)
+
+[03 - LEMP](https://github.com/wilfredoha/DevOps-Projects/tree/main/03%20-%20LEMP)
+
+LEMP is a popular open-source software stack used for building web applications. The acronym stands for the key components of the stack: Linux, Nginx, MySQL, and PHP (or sometimes Python, depending on the developer's choice). LEMP is an alternative to the more traditional LAMP stack, with a different web server and database system.
+
+**L - Linux**: As in the LAMP stack, Linux is the open-source operating system that provides the foundation for the LEMP stack. Various Linux distributions can be used as the operating system for hosting web applications.
+
+**E - Nginx**: Nginx (pronounced "engine-x") is a high-performance, open-source web server known for its speed and efficiency in handling web traffic. Nginx is commonly used as a reverse proxy server, load balancer, and web server for serving web content. It's a popular choice for modern web applications due to its ability to handle a large number of simultaneous connections.
+
+**M - MySQL**: Just like in the LAMP stack, MySQL is often used as the relational database management system (RDBMS) in the LEMP stack. MySQL is well-regarded for its reliability and scalability, making it suitable for storing and managing data for web applications.
+
+**P - PHP (or Python)**: The "P" in LEMP typically refers to PHP, a server-side scripting language commonly used for web development. PHP is embedded within HTML to create dynamic web pages. However, LEMP can also use Python as the server-side scripting language, depending on the specific project requirements or developer preferences.
+
+***
+
 ## MERN
 ## MEAN
 ## CLIENT-SERVER ARCHITECTURE WITH MYSQL
