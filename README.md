@@ -46,6 +46,8 @@ DevOps is a set of practices and principles that aim to streamline and automate 
 
 ![ec2](https://github.com/wilfredoha/DevOps-Projects/blob/main/images/ec2.png)
 
+[01 - AWS - EC2](https://github.com/wilfredoha/DevOps-Projects/tree/main/01%20-%20AWS%20-%20EC2)
+
 Amazon Elastic Compute Cloud (EC2) is a core web service provided by Amazon Web Services (AWS) that offers scalable and flexible cloud computing resources. EC2 allows users to create and manage virtual machines, known as instances, in the cloud. These instances can be configured to run various operating systems, applications, and workloads, making EC2 a fundamental building block for cloud-based solutions.
 
 ***
