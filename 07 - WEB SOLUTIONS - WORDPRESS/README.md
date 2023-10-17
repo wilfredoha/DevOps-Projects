@@ -219,16 +219,16 @@ Update /etc/fstab in this format using your own UUID and rememeber to remove the
 ![5031](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/fstabconfig.png)
 
 
-1. Test the configuration and reload the daemon
+22. Test the configuration and reload the daemon
 
 ```
 sudo mount -a
 sudo systemctl daemon-reload
 ```
 
-2. Verify your setup by running df -h, output must look like this:
+23. Verify your setup by running df -h, output must look like this:
 
-![5032](https://user-images.githubusercontent.com/85270361/210138253-28ab8647-88be-4b59-9bad-c981014cdc4b.PNG)
+![5032](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/df-h-setup-running.png)
 
 
 Step 2 — Prepare the Database Server
