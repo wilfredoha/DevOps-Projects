@@ -89,6 +89,23 @@ LEMP is a popular open-source software stack used for building web applications.
 ***
 
 ## MERN
+
+![mern](https://github.com/wilfredoha/DevOps-Projects/blob/main/images/mern.png)
+
+[04 - MERN](https://github.com/wilfredoha/DevOps-Projects/tree/main/04%20-%20MERN)
+
+MERN is an acronym that represents a popular software stack used for building web applications. Each letter in the acronym stands for a key component of the stack. MERN is well-suited for developing modern, dynamic web applications. Here's a brief overview of each component:
+
+**M - MongoDB**: MongoDB is a NoSQL database that stores data in a flexible, schema-less format, making it particularly well-suited for handling unstructured or semi-structured data. It is used as the database component of the MERN stack, allowing developers to store and manage data efficiently for web applications.
+
+**E - Express.js**: Express.js is a minimal and flexible Node.js web application framework. It simplifies the process of building robust and scalable web applications by providing a set of features and tools for routing, middleware, and handling HTTP requests and responses. Express.js is the server-side framework of the MERN stack.
+
+**R - React**: React is a JavaScript library for building user interfaces. It allows developers to create dynamic, interactive, and reusable UI components for web applications. React is the client-side framework in the MERN stack, and it provides a rich user experience by enabling the creation of single-page applications (SPAs).
+
+**N - Node.js**: Node.js is an open-source, server-side JavaScript runtime that allows developers to build scalable and high-performance network applications. It serves as the runtime environment for the Express.js server and allows developers to use JavaScript on both the client and server sides of the application, ensuring consistent code throughout the stack.
+
+***
+
 ## MEAN
 ## CLIENT-SERVER ARCHITECTURE WITH MYSQL
 ## WEB SOLUTIONS - WORDPRESS
