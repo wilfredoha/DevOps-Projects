@@ -53,6 +53,13 @@ Amazon Elastic Compute Cloud (EC2) is a core web service provided by Amazon Web 
 ***
 
 ## LAMP
+
+![02 - LAMP](https://github.com/wilfredoha/DevOps-Projects/blob/main/images/lamp.png)
+
+[02 - LAMP](https://github.com/wilfredoha/DevOps-Projects/tree/main/02%20-%20LAMP)
+
+***
+
 ## LEMP
 ## MERN
 ## MEAN
