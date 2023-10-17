@@ -216,7 +216,7 @@ sudo nano /etc/fstab
 
 Update /etc/fstab in this format using your own UUID and rememeber to remove the leading and ending quotes.
 
-![5031](https://user-images.githubusercontent.com/85270361/210138190-36d404db-1ad5-4dbb-ad02-c1adfa865e0a.PNG)
+![5031](https://github.com/wilfredoha/DevOps-Projects/blob/main/07%20-%20WEB%20SOLUTIONS%20-%20WORDPRESS/images/fstabconfig.png)
 
 
 1. Test the configuration and reload the daemon
