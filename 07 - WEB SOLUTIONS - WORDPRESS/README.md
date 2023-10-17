@@ -370,7 +370,7 @@ sudo mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf_bckup
 
 5. Try to access from your browser the link to your WordPress 
 
-http://<Web-Server-Public-IP-Address>/wordpress/
+http://Web-Server-Public-IP-Address/wordpress/
   
 ![5040](https://user-images.githubusercontent.com/85270361/210138663-27322aaf-f020-4261-a695-a98dc5f2387c.PNG)
 
