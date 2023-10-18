@@ -65,8 +65,12 @@ lsblk
 ![lsblk_volumnes_created](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/lsblk_volumnes_created.png)
 
 ```
-sudo 
+sudo gdisk /dev/xvdf
+sudo gdisk /dev/xvdg
+sudo gdisk /dev/xvdh
 ```
+
+![gdisk](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/gdisk.png)
 
 3. Create mount points on /mnt directory for the logical volumes as follow:
 
