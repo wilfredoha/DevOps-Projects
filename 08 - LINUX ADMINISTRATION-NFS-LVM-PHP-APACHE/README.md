@@ -74,6 +74,32 @@ sudo gdisk /dev/xvdh
 
 ![lsblk_after_gdisk](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/lsblk_after_gdisk.png)
 
+Isntall lvm package
+
+```
+sudo yum install lvm2 -y
+```
+
+```
+sudo lvmdiskscan
+```
+
+```
+sudo pvcreate /dev/xvdf1
+sudo pvcreate /dev/xvdg1
+sudo pvcreate /dev/xvdh1
+```
+
+![pvs](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/pvs.png)
+
+Create a Volume Group
+
+```
+sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1
+```
+
+![vgs](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/vgs.png)
+
 3. Create mount points on /mnt directory for the logical volumes as follow:
 
 ```
