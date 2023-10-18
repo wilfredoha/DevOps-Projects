@@ -190,7 +190,7 @@ rpcinfo -p | grep nfs
 
 >Important note: In order for NFS server to be accessible from your client, you must also open following ports: TCP 111, UDP 111, UDP 2049
 
-![6003](https://user-images.githubusercontent.com/85270361/210139251-c4cc5219-a207-40ba-9dec-f38a9b0d2424.PNG)
+![nfs-sg](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/nfs-sg.png)
 
 # STEP 2 — CONFIGURE THE DATABASE SERVER
 By now you should know how to install and configure a MySQL DBMS to work with remote Web Server
@@ -229,15 +229,11 @@ mysql> FLUSH PRIVILEGES;
 ```
 
 ## Step 3 — Prepare the Web Servers
-We need to make sure that our Web Servers can serve the same content from shared storage solutions, in our case – NFS Server and MySQL 
-database.
+We need to make sure that our Web Servers can serve the same content from shared storage solutions, in our case – NFS Server and MySQL database.
 
-You already know that one DB can be accessed for reads and writes by multiple clients. For storing shared files that our Web Servers 
-will use – we will utilize NFS and mount previously created Logical Volume lv-apps to the folder where Apache stores files to be served 
-to the users (/var/www).
+You already know that one DB can be accessed for reads and writes by multiple clients. For storing shared files that our Web Servers will use – we will utilize NFS and mount previously created Logical Volume lv-apps to the folder where Apache stores files to be served to the users (/var/www).
 
-This approach will make our Web Servers stateless, which means we will be able to add new ones or remove them whenever we need, and 
-the integrity of the data (in the database and on NFS) will be preserved.
+This approach will make our Web Servers stateless, which means we will be able to add new ones or remove them whenever we need, and the integrity of the data (in the database and on NFS) will be preserved.
 
 ## During the next steps we will do following:
 
@@ -249,6 +245,10 @@ the integrity of the data (in the database and on NFS) will be preserved.
 1. Launch a new EC2 instance with RHEL 8 Operating System
 
 2. Install NFS client
+
+```
+sudo yum update -y
+```
 
 ```
 sudo yum install nfs-utils nfs4-acl-tools -y
@@ -272,6 +272,8 @@ add following line
 ```
 <NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0
 ```
+
+![nfs-server-from-web](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/nfs-server-from-web.png)
 
 5. Install [Remi’s repository](http://www.servermom.org/how-to-enable-remi-repo-on-centos-7-6-and-5/2790/), Apache and PHP
 
