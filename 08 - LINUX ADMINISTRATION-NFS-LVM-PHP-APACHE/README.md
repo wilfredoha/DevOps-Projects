@@ -72,6 +72,8 @@ sudo gdisk /dev/xvdh
 
 ![gdisk](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/gdisk.png)
 
+![lsblk_after_gdisk](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/lsblk_after_gdisk.png)
+
 3. Create mount points on /mnt directory for the logical volumes as follow:
 
 ```
