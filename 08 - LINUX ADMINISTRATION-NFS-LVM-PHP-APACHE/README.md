@@ -110,6 +110,14 @@ sudo lvcreate -n lv-opt -L 9G webdata-vg
 
 ![lvcreate](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/lvcreate.png)
 
+Format disks as xfs
+
+```
+sudo mkfs -t xfs /dev/webdata-vg/lv-apps
+sudo mkfs -t xfs /dev/webdata-vg/lv-logs
+sudo mkfs -t xfs /dev/webdata-vg/lv-opt
+```
+
 3. Create mount points on /mnt directory for the logical volumes as follow:
 
 ```
@@ -121,6 +129,12 @@ Mount lv-apps on /mnt/apps – To be used by webservers
 Mount lv-logs on /mnt/logs – To be used by webserver logs
 Mount lv-opt on /mnt/opt – To be used by Jenkins server in Project 8
 
+```
+sudo mount /dev/webdata-vg/lv-apps /mnt/apps
+sudo mount /dev/webdata-vg/lv-logs /mnt/logs
+sudo mount /dev/webdata-vg/lv-opt /mnt/opt
+```
+
 4. Install NFS server, configure it to start on reboot and make sure it is up and running
 
 ```
@@ -130,6 +144,8 @@ sudo systemctl start nfs-server.service
 sudo systemctl enable nfs-server.service
 sudo systemctl status nfs-server.service
 ```
+
+![nsf_server_enabled](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/nsf_server_enabled.png)
 
 5. Export the mounts for webservers’ subnet cidr to connect as clients. For simplicity, you will install your all three Web Servers inside the same subnet, but in production set up you would probably want to separate each tier inside its own subnet for higher level of security.
 To check your subnet cidr – open your EC2 details in AWS web console and locate ‘Networking’ tab and open a Subnet link:
