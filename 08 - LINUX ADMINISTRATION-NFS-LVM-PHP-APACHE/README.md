@@ -275,6 +275,14 @@ add following line
 
 ![nfs-server-from-web](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/nfs-server-from-web.png)
 
+Create a file in the Web Sever inside /var/www/
+
+![nfs-test-md-01](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/nfs-test-md-01.png)
+
+The file will be copied to /mnt/apps/ inside the NFS Server
+
+![nfs-test-md-02](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/nfs-test-md-02.png)
+
 5. Install [Remi’s repository](http://www.servermom.org/how-to-enable-remi-repo-on-centos-7-6-and-5/2790/), Apache and PHP
 
 ```
