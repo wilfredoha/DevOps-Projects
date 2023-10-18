@@ -45,8 +45,36 @@ On the diagram below you can see a common pattern where several stateless Web Se
 
 - Instead of formating the disks as ext4 you will have to format them as xfs
 - Ensure there are 3 Logical Volumes. lv-opt lv-apps, and lv-logs
-- Create mount points on /mnt directory for the logical volumes as follow:
 
+Connect to your NFS Server
+
+```
+lsblk
+```
+
+![lsblk](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/lsblk.png)
+
+Create 3 Volumes ans attach them to de NFS server
+
+![volume_creation](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/volume_creation.png)
+
+```
+lsblk
+```
+
+![lsblk_volumnes_created](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/lsblk_volumnes_created.png)
+
+```
+sudo 
+```
+
+3. Create mount points on /mnt directory for the logical volumes as follow:
+
+```
+sudo mkdir /mnt/apps
+sudo mkdir /mnt/logs
+sudo mkdir /mnt/opt
+```
 Mount lv-apps on /mnt/apps – To be used by webservers
 Mount lv-logs on /mnt/logs – To be used by webserver logs
 Mount lv-opt on /mnt/opt – To be used by Jenkins server in Project 8
