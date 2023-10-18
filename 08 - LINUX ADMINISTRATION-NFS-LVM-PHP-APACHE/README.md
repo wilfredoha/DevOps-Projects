@@ -108,7 +108,7 @@ sudo lvcreate -n lv-logs -L 9G webdata-vg
 sudo lvcreate -n lv-opt -L 9G webdata-vg
 ```
 
-1[lvcreate](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/lvcreate.png)
+![lvcreate](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/lvcreate.png)
 
 3. Create mount points on /mnt directory for the logical volumes as follow:
 
