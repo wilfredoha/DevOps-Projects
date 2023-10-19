@@ -305,15 +305,35 @@ sudo setsebool -P httpd_execmem 1
 6. Verify that Apache files and directories are available on the Web Server in /var/www and also on the NFS server in /mnt/apps. 
 >If you see the same files – it means NFS is mounted correctly. You can try to create a new file touch test.txt from one server and check if the same file is accessible from other Web Servers.
 
-7. Locate the log folder for Apache on the Web Server and mount it to NFS server’s export for logs. Repeat step №4 to make sure the mount point will persist after reboot.
+7. Locate the log folder for Apache on the Web Server and mount it to NFS server’s export for logs. 
 
-8. Clone the next [repository](https://github.com/wilfredoha/first_repo_devops) to your Github account.
+```
+sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/logs /var/log/httpd
+```
+
+Repeat step №4 to make sure the mount point will persist after reboot.
+
+```
+sudo vi /etc/fstab
+```
+
+add following line
+
+```
+<NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0
+```
+
+8. Clone the next [repository](https://github.com/wilfredoha/tooling) to your Github account.
 
 9. Deploy the tooling website’s code to the Webserver. Ensure that the html folder from the repository is deployed to /var/www/html
 
 >Note 1: Do not forget to open TCP port 80 on the Web Server.
 
->Note 2: If you encounter 403 Error – check permissions to your /var/www/html folder and also disable SELinux sudo setenforce 0 To make this change permanent – open following config file sudo vi /etc/sysconfig/selinux and set SELINUX=disabledthen restart httpd.
+>Note 2: If you encounter 403 Error – check permissions to your /var/www/html folder and also disable SELinux **sudo setenforce 0** To make this change permanent – open following config file **sudo vi /etc/sysconfig/selinux** and set **SELINUX=disabled** then restart httpd.
+
+After this you can go to a web browser an enter the public IP
+
+![test_web-server](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/test_web-server.png)
 
 10. Update the website’s configuration to connect to the database (in /var/www/html/functions.php file). Apply tooling-db.sql script to your database using this command mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql
 
