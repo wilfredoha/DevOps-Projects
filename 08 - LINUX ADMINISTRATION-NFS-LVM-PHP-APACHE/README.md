@@ -371,6 +371,6 @@ sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
 sudo systemctl restart mysql
 ```
 
-Open the website in your browser http://Web-Server-Public-IP-Address-or-Public-DNS-Name/index.php and make sure you can login into the websute with myuser user.
+Open the website in your browser <Web-Server-Public-IP-Address-or-Public-DNS-Name>/index.php and make sure you can login into the websute with myuser user.
   
 ![logged_in](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/logged_in.png)
