@@ -335,22 +335,42 @@ After this you can go to a web browser an enter the public IP
 
 ![test_web-server](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/test_web-server.png)
 
-10. Update the website’s configuration to connect to the database (in /var/www/html/functions.php file). Apply tooling-db.sql script to your database using this command mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql
+Install de mysql client
 
-11. Create in MySQL a new admin user with username: myuser and password: password:
+10. Update the website’s configuration to connect to the database (in /var/www/html/functions.php file).
 
-INSERT INTO ‘users’ (‘id’, ‘username’, ‘password’, ’email’, ‘user_type’, ‘status’) VALUES
--> (1, ‘myuser’, ‘5f4dcc3b5aa765d61d8327deb882cf99’, ‘user@mail.com’, ‘admin’, ‘1’);
+![connection_string](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/connection_string.png)
 
-12. Open the website in your browser http://<Web-Server-Public-IP-Address-or-Public-DNS-Name>/index.php and make sure you can login 
-into the websute with myuser user.
+Isntall the mysql client on the Web Servers
+
+```
+sudo yum install mysql
+```
+
+```
+cd tooling
+```
+
+11. Apply tooling-db.sql script to your database using this command: 
+
+```
+mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql
+```
+
+>This wil create the users table into the tooling database
+
+You need to update the following file in the web server to allow access
+
+```
+sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+
+![bin-address](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/bin-address.png)
+
+```
+sudo systemctl restart mysql
+```
+
+Open the website in your browser http://<Web-Server-Public-IP-Address-or-Public-DNS-Name>/index.php and make sure you can login into the websute with myuser user.
   
-  
-![6004](https://user-images.githubusercontent.com/85270361/210139699-6c023692-c7cb-404a-80c6-848434967fe9.PNG)
-
-  
-Congratulations!
-You have just implemented a web solution for a DevOps team using LAMP stack with remote Database and NFS servers
-  
-
-![6005](https://user-images.githubusercontent.com/85270361/210139730-61025cd1-fa95-4f0f-817e-0f9e1037022c.PNG)
+![logged_in](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/logged_in.png)
