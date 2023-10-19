@@ -347,6 +347,18 @@ Isntall the mysql client on the Web Servers
 sudo yum install mysql
 ```
 
+You need to update the following file in the **Web Server** to allow access
+
+```
+sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+
+![bin-address](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/bin-address.png)
+
+```
+sudo systemctl restart mysql
+```
+
 ```
 cd tooling
 ```
@@ -359,18 +371,13 @@ mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql
 
 >This wil create the users table into the tooling database
 
-You need to update the following file in the web server to allow access
+![db_check](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/db_check.png)
 
-```
-sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
-```
+12. Create in MySQL a new admin user with username: myuser and password: password:
 
-![bin-address](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/bin-address.png)
+INSERT INTO ‘users’ (‘id’, ‘username’, ‘password’, ’email’, ‘user_type’, ‘status’) VALUES
+-> (1, ‘myuser’, ‘5f4dcc3b5aa765d61d8327deb882cf99’, ‘user@mail.com’, ‘admin’, ‘1’);
 
-```
-sudo systemctl restart mysql
-```
-
-Open the website in your browser <Web-Server-Public-IP-Address-or-Public-DNS-Name>/index.php and make sure you can login into the websute with myuser user.
+13. Open the website in your browser http://<Web-Server-Public-IP-Address-or-Public-DNS-Name>/index.php and make sure you can login into the websute with myuser user.
   
 ![logged_in](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/logged_in.png)
