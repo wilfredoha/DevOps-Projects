@@ -373,8 +373,6 @@ mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql
 
 ![db_check](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/db_check.png)
 
-12. Create in MySQL a new admin user with username: myuser and password: password:
-
 Now you can access from the Web Browser with Username: admin and Password: admin
   
 ![logged_in](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/logged_in.png)
