@@ -130,10 +130,8 @@ WebServer02
 ## Side Self Study:
 Read more about different configuration aspects of Apache mod_proxy_balancer module. Understand what sticky session means and when it is used.
 
-Optional Step – Configure Local DNS Names Resolution
-Sometimes it is tedious to remember and switch between IP addresses, especially if you have a lot of servers under your management.
-What we can do, is to configure local domain name resolution. The easiest way is to use /etc/hosts file, although this approach is not
-very scalable, but it is very easy to configure and shows the concept well. So let us configure IP address to domain name mapping for 
+Optional Step – Configure Local DNS Names Resolution Sometimes it is tedious to remember and switch between IP addresses, especially if you have a lot of servers under your management.
+What we can do, is to configure local domain name resolution. The easiest way is to use /etc/hosts file, although this approach is not very scalable, but it is very easy to configure and shows the concept well. So let us configure IP address to domain name mapping for 
 our LB.
   
   
@@ -147,8 +145,7 @@ sudo vi /etc/hosts
 <WebServer1-Private-IP-Address> Web1
 <WebServer2-Private-IP-Address> Web2
 ```
-  
-  
+
 Now you can update your LB config file with those names instead of IP addresses.
   
 ```
@@ -158,8 +155,9 @@ BalancerMember http://Web2:80 loadfactor=5 timeout=1
   
 You can try to curl your Web Servers from LB locally curl http://Web1 or curl http://Web2 – it shall work.
 
-Remember, this is only internal configuration and it is also local to your LB server, these names will neither be ‘resolvable’ 
-from other servers internally nor from the Internet.
+![curlweb1](https://github.com/wilfredoha/DevOps-Projects/blob/main/09%20-%20LOAD%20BALANCER%20SOLUCTION%20WITH%20APACHE/images/curlweb1.png)
+
+Remember, this is only internal configuration and it is also local to your LB server, these names will neither be ‘resolvable’ from other servers internally nor from the Internet.
 
 Targed Architecture
 Now your set up looks like this:
