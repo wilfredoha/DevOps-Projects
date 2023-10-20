@@ -320,7 +320,7 @@ sudo vi /etc/fstab
 add following line
 
 ```
-<NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0
+<NFS-Server-Private-IP-Address>:/mnt/logs /var/log/httpd nfs defaults 0 0
 ```
 
 8. Clone the next [repository](https://github.com/wilfredoha/tooling) into the Web Servers.
