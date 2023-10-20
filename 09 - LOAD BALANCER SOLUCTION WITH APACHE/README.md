@@ -31,22 +31,11 @@ In order to hide all this complexity and to have a single point of access with a
 
 Let us take a look at the updated solution architecture with an LB added on top of Web Servers (for simplicity let us assume it is a software L7 Application LB, for example – Apache, NGINX or HAProxy)
 
-![6006](https://user-images.githubusercontent.com/85270361/210139941-d69c03da-fc74-4781-a6f6-d60c411dc052.PNG)
+![architecture](https://github.com/wilfredoha/DevOps-Projects/blob/main/09%20-%20LOAD%20BALANCER%20SOLUCTION%20WITH%20APACHE/images/architecture.png)
 
 In this project we will enhance our Tooling Website solution by adding a Load Balancer to disctribute traffic between Web Servers and allow users to access our website using a single URL.
 
-Task
-Deploy and configure an Apache Load Balancer for Tooling Website solution on a separate Ubuntu EC2 intance. Make sure that users can be served by Web servers through the Load Balancer.
-
-To simplify, let us implement this solution with 2 Web Servers, the approach will be the same for 3 and more Web Servers.
-
 ## Prerequisites
-Make sure that you have following servers installed and configured within Project-7:
-
-1. Two RHEL8 Web Servers
-2. One MySQL DB Server (based on Ubuntu 20.04)
-3. One RHEL8 NFS server
-
-![6007](https://user-images.githubusercontent.com/85270361/210140264-3d8cb37c-d631-4a16-bbeb-22e8e172595e.PNG)
-
+- Deploy 2 Ubuntu servers on AWS and use user data to configure the instances as Web Servers
+- Deploy and configure an Apache Load Balancer for the Website solution on a separate Ubuntu EC2 intance. Make sure that users can be served by Web servers through the Load Balancer.
 
