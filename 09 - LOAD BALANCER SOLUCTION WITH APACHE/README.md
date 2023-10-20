@@ -33,26 +33,27 @@ Let us take a look at the updated solution architecture with an LB added on top 
 
 ![architecture](https://github.com/wilfredoha/DevOps-Projects/blob/main/09%20-%20LOAD%20BALANCER%20SOLUCTION%20WITH%20APACHE/images/architecture.png)
 
-In this project we will enhance our Tooling Website solution by adding a Load Balancer to disctribute traffic between Web Servers and allow users to access our website using a single URL.
-
-## Prerequisites
+# Web Servers
 - Deploy 2 Ubuntu servers on AWS and use user data to configure the instances as Web Servers
-- Deploy and configure an Apache Load Balancer for the Website solution on a separate Ubuntu EC2 intance. Make sure that users can be served by Web servers through the Load Balancer.
 
-***
-AWS
-***
+```
+#!/bin/bash
+apt update -y
+apt install -y apache2
+systemctl start apache2
+systemctl enable apache2
+echo “Hello World from $(hostname -f)” > /var/www/html/index.html
+```
 
 # CONFIGURE APACHE AS A LOAD BALANCER
 
-1. Create an Ubuntu Server 20.04 EC2 instance and name it Project-apache-lb, so your EC2 list will look like this:
+1. Create an Ubuntu Server 20.04 EC2 instance and name it UbuntuLB, so your EC2 list will look like this:
 
-![6008](https://user-images.githubusercontent.com/85270361/210140657-851c58dd-d061-4c3f-89a9-6c0554678207.PNG)
+![aws-instances](https://github.com/wilfredoha/DevOps-Projects/blob/main/09%20-%20LOAD%20BALANCER%20SOLUCTION%20WITH%20APACHE/images/aws-instances.png)
 
+2. Open TCP port 80 on UbuntuLB by creating an Inbound Rule in Security Group.
 
-2. Open TCP port 80 on Project-8-apache-lb by creating an Inbound Rule in Security Group.
-
-3. Install Apache Load Balancer on Project-8-apache-lb server and configure it to point traffic coming to LB to both Web Servers:
+3. Install Apache Load Balancer on UbuntuLB server and configure it to point traffic coming to LB to both Web Servers:
 
 ```
 #Install apache2
@@ -81,36 +82,38 @@ sudo systemctl status apache2
 Configure load balancing
 
 ```
-sudo vi /etc/apache2/sites-available/000-default.conf
+sudo nano /etc/apache2/sites-available/000-default.conf
+```
 
 #Add this configuration into this section <VirtualHost *:80>  </VirtualHost>
 
+```
 <Proxy "balancer://mycluster">
-               BalancerMember http://<WebServer1-Private-IP-Address>:80 loadfactor=5 timeout=1
-               BalancerMember http://<WebServer2-Private-IP-Address>:80 loadfactor=5 timeout=1
-               ProxySet lbmethod=bytraffic
-               # ProxySet lbmethod=byrequests
-        </Proxy>
+        BalancerMember http://<WebServer1-Private-IP-Address>:80 loadfactor=5 timeout=1
+        BalancerMember http://<WebServer2-Private-IP-Address>:80 loadfactor=5 timeout=1
+        ProxySet lbmethod=bytraffic
+        # ProxySet lbmethod=byrequests
+</Proxy>
 
-        ProxyPreserveHost On
-        ProxyPass / balancer://mycluster/
-        ProxyPassReverse / balancer://mycluster/
+ProxyPreserveHost On
+ProxyPass / balancer://mycluster/
+ProxyPassReverse / balancer://mycluster/
+```
 
 #Restart apache server
 
+```
 sudo systemctl restart apache2
 ```
 
-bytraffic balancing method will distribute incoming load between your Web Servers according to current traffic load. We can control
-in which proportion the traffic must be distributed by loadfactor parameter.
+by traffic balancing method will distribute incoming load between your Web Servers according to current traffic load. We can control in which proportion the traffic must be distributed by loadfactor parameter.
 
 You can also study and try other methods, like: bybusyness, byrequests, heartbeat
-
 
 4. Verify that our configuration works – try to access your LB’s public IP address or Public DNS name from your browser:
 
 ```
-http://<Load-Balancer-Public-IP-Address-or-Public-DNS-Name>/index.php
+http://<Load-Balancer-Public-IP-Address-or-Public-DNS-Name>/index.html
 ```
 
 Note: If in the Project-7 you mounted /var/log/httpd/ from your Web Servers to the NFS server – unmount them and make sure that 
@@ -118,14 +121,11 @@ each Web Server has its own log directory.
 
 Open two ssh/Putty consoles for both Web Servers and run following command:
 
-
 ```
 sudo tail -f /var/log/httpd/access_log
 ```
 
-Try to refresh your browser page http://<Load-Balancer-Public-IP-Address-or-Public-DNS-Name>/index.php several times and make sure
-that both servers receive HTTP GET requests from your LB – new records must appear in each server’s log file. The number of requests
-to each server will be approximately the same since we set loadfactor to the same value for both servers – it means that traffic will 
+Try to refresh your browser page http://<Load-Balancer-Public-IP-Address-or-Public-DNS-Name>/index.php several times and make sure that both servers receive HTTP GET requests from your LB – new records must appear in each server’s log file. The number of requests to each server will be approximately the same since we set loadfactor to the same value for both servers – it means that traffic will 
 be disctributed evenly between them.
 
 If you have configured everything correctly – your users will not even notice that their requests are served by more than one server.
