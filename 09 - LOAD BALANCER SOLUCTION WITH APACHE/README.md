@@ -116,7 +116,7 @@ You can also study and try other methods, like: bybusyness, byrequests, heartbea
 http://<Load-Balancer-Public-IP-Address-or-Public-DNS-Name>/index.html
 ```
 
-Try to refresh your browser page http://<Load-Balancer-Public-IP-Address-or-Public-DNS-Name>/index.html several times and make sure that both servers receive HTTP GET requests from your LB – You will see that the private IP changes, now you are connecting to both Web Servers through the LB. The number of requests to each server will be approximately the same since we set loadfactor to the same value for both servers – it means that traffic will be disctributed evenly between them.
+Try to refresh your browser page Load-Balancer-Public-IP-Address-or-Public-DNS-Name/index.html several times and make sure that both servers receive HTTP GET requests from your LB – You will see that the private IP changes, now you are connecting to both Web Servers through the LB. The number of requests to each server will be approximately the same since we set loadfactor to the same value for both servers – it means that traffic will be disctributed evenly between them.
 
 If you have configured everything correctly – your users will not even notice that their requests are served by more than one server.
 
