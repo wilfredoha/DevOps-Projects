@@ -157,19 +157,4 @@ You can try to curl your Web Servers from LB locally curl http://Web1 or curl ht
 
 ![curlweb1](https://github.com/wilfredoha/DevOps-Projects/blob/main/09%20-%20LOAD%20BALANCER%20SOLUCTION%20WITH%20APACHE/images/curlweb1.png)
 
-Remember, this is only internal configuration and it is also local to your LB server, these names will neither be ‘resolvable’ from other servers internally nor from the Internet.
-
-Targed Architecture
-Now your set up looks like this:
-  
-
-![6009](https://user-images.githubusercontent.com/85270361/210151400-4d6381de-b901-429e-b66b-9b7c2f4b2fe5.PNG)
-
-  
-  
-Congratulations!
-You have just implemented a Load balancing Web Solution for your DevOps team.
-  
-  
-![6010](https://user-images.githubusercontent.com/85270361/210151428-77f996d3-556a-4c83-b763-8f64cf4c0efd.PNG)
-
+Remember, this is only internal configuration and it is also local to your LB server, these names will neither be 'resolvable' from other servers internally nor from the Internet.
