@@ -323,7 +323,7 @@ add following line
 <NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0
 ```
 
-8. Clone the next [repository](https://github.com/wilfredoha/tooling) to your Github account.
+8. Clone the next [repository](https://github.com/wilfredoha/tooling) into the Web Servers.
 
 9. Deploy the tooling website’s code to the Webserver. Ensure that the html folder from the repository is deployed to /var/www/html
 
