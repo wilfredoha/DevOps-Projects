@@ -85,7 +85,7 @@ Configure load balancing
 sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
-#Add this configuration into this section <VirtualHost *:80>  </VirtualHost>
+#Add this configuration into this section **<VirtualHost *:80>  </VirtualHost>**
 
 ```
 <Proxy "balancer://mycluster">
@@ -100,7 +100,7 @@ ProxyPass / balancer://mycluster/
 ProxyPassReverse / balancer://mycluster/
 ```
 
-#Restart apache server
+Restart apache server
 
 ```
 sudo systemctl restart apache2
