@@ -128,7 +128,7 @@ MEAN is an acronym representing a popular software stack for building web applic
 
 ![mysql_client_sever](https://github.com/wilfredoha/DevOps-Projects/blob/main/images/mysql_client_sever.png)
 
-[06 - CLIENT-SERVER ARCHITECTURE WITH MYSQL](https://github.com/wilfredoha/DevOps-Projects/tree/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE)
+[06 - CLIENT-SERVER ARCHITECTURE WITH MYSQL](https://github.com/wilfredoha/DevOps-Projects/tree/main/06%20-%20CLIENT-SERVER%20ARCHITECTURE%20WITH%20MYSQL)
 
 The MySQL client-server architecture is a fundamental concept in managing and interacting with a MySQL database system. It consists of two main components: the MySQL client and the MySQL server. Here's a quick introduction to both:
 
