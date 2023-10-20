@@ -125,4 +125,27 @@ MEAN is an acronym representing a popular software stack for building web applic
 ***
 
 ## CLIENT-SERVER ARCHITECTURE WITH MYSQL
+
+![mysql_client_sever](https://github.com/wilfredoha/DevOps-Projects/blob/main/images/mysql_client_sever.png)
+
+[06 - CLIENT-SERVER ARCHITECTURE WITH MYSQL](https://github.com/wilfredoha/DevOps-Projects/tree/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE)
+
+The MySQL client-server architecture is a fundamental concept in managing and interacting with a MySQL database system. It consists of two main components: the MySQL client and the MySQL server. Here's a quick introduction to both:
+
+- ### MySQL Server:
+1. **Database Engine**: The MySQL server is a database management system that stores and manages data. It uses a relational database management system (RDBMS) to organize data into structured tables. 
+2. **Data Storage**: It is responsible for storing, retrieving, and managing data efficiently, making it available to clients when requested.
+3. **SQL Interpreter**: The server interprets SQL (Structured Query Language) statements sent by clients to perform operations such as querying, updating, or managing the database.
+4. **User Authentication and Authorization**: It handles user authentication and authorization to ensure that only authorized users can access and modify the data.
+
+- ### MySQL Client:
+1. **User Interface**: The client is a software application or tool that allows users to interact with the MySQL server. It provides a graphical or command-line interface for sending SQL queries and managing the database.
+2. **Connection Manager**: The client establishes a connection to the MySQL server, enabling users to connect to and communicate with the database.
+3. **Query Execution**: It sends SQL queries and commands to the server and receives the results. Users can use various clients, such as MySQL Workbench, phpMyAdmin, or command-line tools, to interact with the server.
+4. **Data Presentation**: The client formats and presents the data retrieved from the server to users in a human-readable form, such as tables, reports, or visualizations.
+
+>In the client-server architecture, multiple clients can connect to a single MySQL server concurrently. This design allows for centralized data management, secure access control, and efficient data retrieval and manipulation. It is widely used in web applications, data-driven software, and various other domains where structured data storage and retrieval are essential.
+
+***
+
 ## WEB SOLUTIONS - WORDPRESS
