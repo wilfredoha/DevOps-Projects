@@ -329,7 +329,17 @@ add following line
 
 >Note 1: Do not forget to open TCP port 80 on the Web Server.
 
->Note 2: If you encounter 403 Error – check permissions to your /var/www/html folder and also disable SELinux **sudo setenforce 0** To make this change permanent – open following config file **sudo vi /etc/sysconfig/selinux** and set **SELINUX=disabled** then restart httpd.
+If you encounter 403 Error – check permissions to your /var/www/html folder and also disable SELinux 
+
+```
+sudo setenforce 0
+sudo vi /etc/sysconfig/selinux
+
+Change the value of SELINUX to disabled 
+SELINUX=disabled
+```
+
+Then restart httpd.
 
 After this you can go to a web browser an enter the public IP
 
@@ -373,6 +383,3 @@ mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql
 
 ![db_check](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/db_check.png)
 
-Now you can access from the Web Browser with Username: admin and Password: admin
-  
-![logged_in](https://github.com/wilfredoha/DevOps-Projects/blob/main/08%20-%20LINUX%20ADMINISTRATION-NFS-LVM-PHP-APACHE/images/logged_in.png)
