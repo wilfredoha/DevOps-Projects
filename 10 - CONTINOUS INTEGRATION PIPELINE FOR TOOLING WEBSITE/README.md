@@ -91,9 +91,8 @@ In this part, you will learn how to configure a simple Jenkins job/project (thes
   
 2. Go to Jenkins web console, click "New Item" and create a "Freestyle project"
 
-![6018](https://user-images.githubusercontent.com/85270361/210152007-3464d147-0ac9-4c44-a9f6-a81d6612d887.PNG)
+![jenkins_new_item](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/jenkins_new_item.png)
 
-  
 To connect your GitHub repository, you will need to provide its URL, you can copy from the repository itself
   
   
