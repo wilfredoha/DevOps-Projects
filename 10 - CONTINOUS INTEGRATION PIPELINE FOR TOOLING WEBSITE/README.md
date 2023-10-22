@@ -43,6 +43,7 @@ sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debi
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 sudo apt-get update
+
 sudo apt-get install jenkins
 ```
 
@@ -58,12 +59,11 @@ sudo systemctl status jenkins
 
 
 5. Perform initial Jenkins setup.
-From your browser access http://<Jenkins-Server-Public-IP-Address-or-Public-DNS-Name>:8080
+From your browser access http://**Jenkins-Server-Public-IP-Address-or-Public-DNS-Name**:8080
 
 You will be prompted to provide a default admin password
-
   
-![6013](https://user-images.githubusercontent.com/85270361/210151821-9b9baaf6-e89c-4a9b-b06a-c2c1d6e01930.PNG)
+![unlock_jenkins](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/unlock_jenkins.png)
 
   
 Retrieve it from your server:
@@ -74,17 +74,13 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
   
 Then you will be asked which plugings to install – choose suggested plugins.
  
+![sugested_plugins_jenkins](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/sugested_plugins_jenkins.png)
 
-![6014](https://user-images.githubusercontent.com/85270361/210151862-fee4be20-f6b3-4c3b-9830-78ce4a28253b.PNG)
-
-  
 Once plugins installation is done – create an admin user and you will get your Jenkins server address.
 
 The installation is completed!
   
-
-![6015](https://user-images.githubusercontent.com/85270361/210151901-28354c74-518a-49d6-85bd-ab7b98c7f419.PNG)
-  
+![installed_jenkins](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/installed_jenkins.png)
 
 Step 2 – Configure Jenkins to retrieve source codes from GitHub using Webhooks
 In this part, you will learn how to configure a simple Jenkins job/project (these two terms can be used interchangeably). This job 
