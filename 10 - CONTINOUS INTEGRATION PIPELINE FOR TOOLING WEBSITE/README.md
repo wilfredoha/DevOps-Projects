@@ -53,7 +53,7 @@ sudo systemctl status jenkins
 
 4. By default Jenkins server uses TCP port 8080 – open it by creating a new Inbound Rule in your EC2 Security Group
 
-![6012](https://user-images.githubusercontent.com/85270361/210151779-4467072e-8a07-46e6-951b-5176e067c110.PNG)
+![sg_jenkins](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/sg_jenkins.png)
 
 
 5. Perform initial Jenkins setup.
