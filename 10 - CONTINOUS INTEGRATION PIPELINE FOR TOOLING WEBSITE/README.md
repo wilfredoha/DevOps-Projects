@@ -95,7 +95,7 @@ In this part, you will learn how to configure a simple Jenkins job/project (thes
 
 To connect your GitHub repository, you will need to provide its URL, you can copy from the repository itself
   
-![repo_url](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/repo_url.png)
+![repo_url](https://user-images.githubusercontent.com/85270361/210152055-41f70f37-ec2d-477a-a3f2-456b15474459.PNG)
 
   
 In configuration of your Jenkins freestyle project choose Git repository, provide there the link to your Tooling GitHub repository 
