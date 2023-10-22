@@ -98,17 +98,12 @@ To connect your GitHub repository, you will need to provide its URL, you can cop
 ![repo_url](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/repo_url.png)
 
   
-In configuration of your Jenkins freestyle project choose Git repository, provide there the link to your Tooling GitHub repository 
-and credentials (user/password) so Jenkins could access files in the repository.
+In configuration of your Jenkins freestyle project choose Git repository, provide there the link to your Tooling GitHub repository and credentials (user/password) so Jenkins could access files in the repository.
 
-
-![6020](https://user-images.githubusercontent.com/85270361/210152098-dbee8c5f-66e9-4d67-9366-09bddc8b2ed8.PNG)
-
-  
+![add_repo_to_jenkins](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/add_repo_to_jenkins.png)
   
 Save the configuration and let us try to run the build. For now we can only do it manually.
-Click "Build Now" button, if you have configured everything correctly, the build will be successfull and you will see it under #1
-  
+Click "Build Now" button, if you have configured everything correctly, the build will be successfull and you will see it under #1  
   
 ![6021](https://user-images.githubusercontent.com/85270361/210152125-9b0ea377-b751-4f3c-a671-bcc957d2ee37.PNG)
 
