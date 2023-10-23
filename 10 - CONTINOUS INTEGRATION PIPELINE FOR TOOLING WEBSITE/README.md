@@ -172,20 +172,15 @@ Scroll down to Publish over SSH plugin configuration section and configure it to
 Test the configuration and make sure the connection returns Success. Remember, that TCP port 22 on NFS server must be open to receive
 SSH connections.
 
-
-![6026](https://user-images.githubusercontent.com/85270361/210152524-d8811bcf-1bac-4693-9f55-216a0c394973.PNG)
+![nfs_ssh_config](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/nfs_ssh_config.png)
 
 Save the configuration, open your Jenkins job/project configuration page and add another one "Post-build Action"
 
+![send_bulid_artifacts_over_ssh_01](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/send_bulid_artifacts_over_ssh_01.png)
 
-![6027](https://user-images.githubusercontent.com/85270361/210152559-83e84c9b-5740-4e40-91b3-9b75fb319ccd.PNG)
-
-
-Configure it to send all files probuced by the build into our previouslys define remote directory. In our case we want to copy all
-files and directories – so we use **.
+Configure it to send all files probuced by the build into our previouslys define remote directory. In our case we want to copy all files and directories – so we use **.
 
 If you want to apply some particular pattern to define which files to send – use this syntax.
-
 
 ![6028](https://user-images.githubusercontent.com/85270361/210152615-2334a0ce-e78a-413d-b2a9-b93dffed2c17.PNG)
 
