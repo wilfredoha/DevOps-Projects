@@ -156,10 +156,10 @@ On main dashboard select "Manage Jenkins" and choose "Plugins" menu item.
 
 On "Available plugins" tab search for "Publish Over SSH" plugin and install it
 
-![6025](https://user-images.githubusercontent.com/85270361/210152439-c65af162-b6da-43a6-bc3b-a0b43ef30693.PNG)
+![publish_over_ssh](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/publish_over_ssh.png)
 
 2. Configure the job/project to copy artifacts over to NFS server.
-On main dashboard select "Manage Jenkins" and choose "Configure System" menu item.
+On main dashboard select "Manage Jenkins" and choose "System" menu item.
 
 Scroll down to Publish over SSH plugin configuration section and configure it to be able to connect to your NFS server:
 
