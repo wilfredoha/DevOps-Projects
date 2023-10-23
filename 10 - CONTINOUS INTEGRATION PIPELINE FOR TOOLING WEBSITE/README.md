@@ -116,7 +116,15 @@ But this build does not produce anything and it runs only when we trigger it man
 3. Click "Configure" your job/project and add these two configurations
 Configure triggering the job from GitHub webhook:
 
-  
+![config_01](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/config_01.png)
+
+![config_02](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/config_02.png)
+
+![config_03](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/config_03.png)
+
+![config_04](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/config_04.png)
+
+
 ![6022](https://user-images.githubusercontent.com/85270361/210152165-d652ba1d-cbc0-4d4b-ae87-03109268de38.PNG)
 
 Configure "Post-build Actions" to archive all the files – files resulted from a build are called "artifacts".
