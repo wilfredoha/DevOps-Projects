@@ -128,22 +128,11 @@ Configure "Post-build Actions" to archive all the files – files resulted from 
 
 ![config_04](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/config_04.png)
 
+Now, go ahead and make some change in any file in your GitHub repository (e.g. README.MD file) and push the changes to the main branch.
 
+You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on Jenkins server.
 
-
-
-  
-
-![6023](https://user-images.githubusercontent.com/85270361/210152199-9432da9f-2eb0-4369-bc2a-45e8c7838985.PNG)
-
-  
-Now, go ahead and make some change in any file in your GitHub repository (e.g. README.MD file) and push the changes to the master branch.
-
-You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on Jenkins
-server.
-
-
-![6024](https://user-images.githubusercontent.com/85270361/210152236-8ee1b372-25cf-4848-b8d0-e3413972abeb.PNG)
+![second_build](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/second_build.png)
 
   
 You have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as
