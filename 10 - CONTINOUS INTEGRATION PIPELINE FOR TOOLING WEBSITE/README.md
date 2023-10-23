@@ -184,6 +184,9 @@ If you want to apply some particular pattern to define which files to send – u
 
 ![send_bulid_artifacts_over_ssh_002](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/send_bulid_artifacts_over_ssh_002.png)
 
+SSH into your NFSServer and change permisions to the /mnt/apps folder. Make sure that the security group of the NFSServer allows SSH trafic from your Jenkins Server
+
+![permisions_nfs](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/permisions_nfs.png)
 
 Save this configuration and go ahead, change something in README.MD file in your GitHub Tooling repository.
 
@@ -201,9 +204,3 @@ cat /mnt/apps/README.md
 ```
 
 If you see the changes you had previously made in your GitHub – the job works as expected.
-
-Congratulations!
-You have just implemented your first Continous Integration solution using Jenkins CI. Watch out for advanced CI configurations in 
-upcoming projects.
-
-![6029](https://user-images.githubusercontent.com/85270361/210152690-24e9c16c-704b-4589-a725-e8299e75d6a3.PNG)
