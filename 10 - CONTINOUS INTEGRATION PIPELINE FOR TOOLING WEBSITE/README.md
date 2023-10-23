@@ -135,15 +135,12 @@ You will see that a new build has been launched automatically (by webhook) and y
 ![second_build](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/second_build.png)
 
   
-You have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as
-‘push’ because the changes are being ‘pushed’ and files transfer is initiated by GitHub). There are also other methods: trigger one 
-job (downstreadm) from another (upstream), poll GitHub periodically and others.
+You have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as ‘push’ because the changes are being ‘pushed’ and files transfer is initiated by GitHub). There are also other methods: trigger one job (downstreadm) from another (upstream), poll GitHub periodically and others.
 
 By default, the artifacts are stored on Jenkins server locally
 
-  
 ```
-ls /var/lib/jenkins/jobs/tooling_github/builds/<build_number>/archive/
+ ls -l /var/lib/jenkins/jobs/tooling\ github/builds/2/archive/
 ```
-  
+![archived](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/archived.png)
   
