@@ -182,7 +182,7 @@ Configure it to send all files probuced by the build into our previouslys define
 
 If you want to apply some particular pattern to define which files to send – use this syntax.
 
-![send_bulid_artifacts_over_ssh_02](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/send_bulid_artifacts_over_ssh_02.png)
+![send_bulid_artifacts_over_ssh_002](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/send_bulid_artifacts_over_ssh_002.png)
 
 
 Save this configuration and go ahead, change something in README.MD file in your GitHub Tooling repository.
