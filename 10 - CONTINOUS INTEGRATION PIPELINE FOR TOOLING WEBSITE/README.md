@@ -105,9 +105,8 @@ In configuration of your Jenkins freestyle project choose Git repository, provid
 Save the configuration and let us try to run the build. For now we can only do it manually.
 Click "Build Now" button, if you have configured everything correctly, the build will be successfull and you will see it under #1  
   
-![6021](https://user-images.githubusercontent.com/85270361/210152125-9b0ea377-b751-4f3c-a671-bcc957d2ee37.PNG)
+![build_project_jenkins](https://github.com/wilfredoha/DevOps-Projects/blob/main/10%20-%20CONTINOUS%20INTEGRATION%20PIPELINE%20FOR%20TOOLING%20WEBSITE/images/build_project_jenkins.png)
 
-  
 You can open the build and check in "Console Output" if it has run successfully.
 
 If so – congratulations! You have just made your very first Jenkins build!
