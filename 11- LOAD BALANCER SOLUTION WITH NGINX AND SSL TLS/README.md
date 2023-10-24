@@ -24,6 +24,32 @@ Your target architecture will look like this:
 
 ![architecture](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/architecture.png)
 
+# REGISTER A NEW DOMAIN NAME
+Let us make necessary configurations to make connections to our Tooling Web Solution secured!
+
+In order to get a valid SSL certificate – you need to register a new domain name, you can do it using any Domain name registrar – a company that manages reservation of domain names. The most popular ones are: Godaddy.com, Domain.com, Bluehost.com.
+
+1. Register a new domain name with any registrar of your choice in any domain zone (e.g. .com, .net, .org, .edu, .info, .xyz or any other). In my case I already have a domain with [Godaddy](https://www.godaddy.com/en-uk).
+
+![my_domain](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/my_domain.png)
+
+2. Assign an Elastic IP to your Nginx LB server and associate your domain name with this Elastic IP
+
+You might have noticed, that every time you restart or stop/start your EC2 instance – you get a new public IP address. When you want to associate your domain name – it is better to have a static IP address that does not change after reboot. Elastic IP is the solution for this problem, learn how to allocate an Elastic IP and associate it with an EC2 server [on this page](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html).
+
+3. Update A record in your registrar to point to Nginx LB using Elastic IP address
+Learn how associate your domain name to your Elastic IP on this page.
+
+Side Self Study: Read about different DNS record types and learn what they are used for.
+
+Check that your Web Servers can be reached from your browser using new domain name using HTTP protocol – http://your-domain-name.com
+
+
+
+
+
+
+
 ## CONFIGURE NGINX AS A LOAD BALANCER
 You can either uninstall Apache from the existing Load Balancer server, or create a fresh installation of Linux for Nginx.
 
@@ -82,23 +108,19 @@ sudo systemctl status nginx
 Side Self Study: Read more about HTTP load balancing methods and features supported by Nginx
 https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/
 
-# REGISTER A NEW DOMAIN NAME AND CONFIGURE SECURED CONNECTION USING SSL/TLS CERTIFICATES
-Let us make necessary configurations to make connections to our Tooling Web Solution secured!
 
-In order to get a valid SSL certificate – you need to register a new domain name, you can do it using any Domain name registrar – a company that manages reservation of domain names. The most popular ones are: Godaddy.com, Domain.com, Bluehost.com.
 
-1. Register a new domain name with any registrar of your choice in any domain zone (e.g. .com, .net, .org, .edu, .info, .xyz or any other)
 
-2. Assign an Elastic IP to your Nginx LB server and associate your domain name with this Elastic IP
 
-You might have noticed, that every time you restart or stop/start your EC2 instance – you get a new public IP address. When you want to associate your domain name – it is better to have a static IP address that does not change after reboot. Elastic IP is the solution for this problem, learn how to allocate an Elastic IP and associate it with an EC2 server [on this page](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html).
 
-3. Update A record in your registrar to point to Nginx LB using Elastic IP address
-Learn how associate your domain name to your Elastic IP on this page.
+***
+***
+***
 
-Side Self Study: Read about different DNS record types and learn what they are used for.
+# CONFIGURE SECURED CONNECTION USING SSL/TLS CERTIFICATES
 
-Check that your Web Servers can be reached from your browser using new domain name using HTTP protocol – http://your-domain-name.com
+
+
 
 4. Configure Nginx to recognize your new domain name
 Update your nginx.conf with server_name www.your-domain-name.com instead of server_name www.domain.com
