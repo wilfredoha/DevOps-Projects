@@ -22,7 +22,7 @@ This project consists of two parts:
 
 Your target architecture will look like this:
 
-![6030](https://user-images.githubusercontent.com/85270361/210153166-b5dc7221-7d15-47ed-ae34-f0ffeaecd9b4.PNG)
+![architecture](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/architecture.png)
 
 ## CONFIGURE NGINX AS A LOAD BALANCER
 You can either uninstall Apache from the existing Load Balancer server, or create a fresh installation of Linux for Nginx.
