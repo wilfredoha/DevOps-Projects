@@ -123,6 +123,20 @@ sudo nginx -t
 
 ![nginx_ok](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/nginx_ok.png)
 
+Go to. This folder is empty.
+
+```
+cd /etc/nginx/sites-enabled/
+```
+
+Link the Load Balancer config file.
+
+```
+sudo ln -s ../sites-available/load_balancer.conf .
+```
+
+![link_load_balancer_config_file](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/link_load_balancer_config_file.png)
+
 
 ***
 ***
