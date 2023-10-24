@@ -123,6 +123,11 @@ sudo nginx -t
 
 ![nginx_ok](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/nginx_ok.png)
 
+
+***
+***
+***
+
 Configure Nginx LB using Web Servers’ names defined in /etc/hosts
 
 Open the default nginx configuration file
