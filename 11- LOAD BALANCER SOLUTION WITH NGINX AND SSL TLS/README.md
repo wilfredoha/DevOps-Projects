@@ -95,7 +95,7 @@ Side Self Study: Read about different DNS record types and learn what they are u
 Check that your Web Servers can be reached from your browser using new domain name using HTTP protocol – http://your-domain-name.com
 
 4. Configure Nginx to recognize your new domain name
-Update your nginx.conf with server_name www.<your-domain-name.com> instead of server_name www.domain.com
+Update your nginx.conf with server_name www.your-domain-name.com instead of server_name www.domain.com
 
 5. Install certbot and request for an SSL/TLS certificate
 Make sure snapd service is active and running
