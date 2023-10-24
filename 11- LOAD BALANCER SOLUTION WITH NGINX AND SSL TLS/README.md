@@ -59,7 +59,7 @@ Add the nameservers as shown in the following image.
 
 ![hosted_zone_5](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/hosted_zone_5.png)
 
-Now we need to create two records for a our Domain in Route 53. At this point the Load balancer isntance must be running and with the Elastic IP associated.
+Now we need to create two records for our Domain in Route 53. At this point the Load balancer isntance must be running and with the Elastic IP associated.
 
 Copy the public IP Address of the Loab Balancer.
 
@@ -77,7 +77,7 @@ Side Self Study: Read about different DNS record types and learn what they are u
 
 
 
-Check that your Web Servers can be reached from your browser using new domain name using HTTP protocol – http://your-domain-name.com
+
 
 
 
