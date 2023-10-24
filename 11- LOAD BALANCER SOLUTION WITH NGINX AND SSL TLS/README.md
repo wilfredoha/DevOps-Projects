@@ -38,9 +38,44 @@ In order to get a valid SSL certificate – you need to register a new domain na
 You might have noticed, that every time you restart or stop/start your EC2 instance – you get a new public IP address. When you want to associate your domain name – it is better to have a static IP address that does not change after reboot. Elastic IP is the solution for this problem, learn how to allocate an Elastic IP and associate it with an EC2 server [on this page](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html).
 
 3. Update A record in your registrar to point to Nginx LB using Elastic IP address
-Learn how associate your domain name to your Elastic IP on this page.
+
+Go to Route 53 in your AWS account and create a **Hosted Zone**.
+
+![hosted_zone_1](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/hosted_zone_1.png)
+
+Add your Domian name and create the hosted zone
+
+![hosted_zone_2](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/hosted_zone_2.png)
+
+Now you need to add de DNS generated in the hosted one to the Domain name in your Domain Name registrar.
+
+![hosted_zone_3](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/hosted_zone_3.png)
+
+Go to your Godaddy accont
+
+![hosted_zone_4](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/hosted_zone_4.png)
+
+Add the nameservers as shown in the following image.
+
+![hosted_zone_5](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/hosted_zone_5.png)
+
+Now we need to create two records for a our Domain in Route 53. At this point the Load balancer isntance must be running and with the Elastic IP associated.
+
+Copy the public IP Address of the Loab Balancer.
+
+![hosted_zone_6](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/hosted_zone_6.png)
+
+![hosted_zone_7](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/hosted_zone_7.png)
 
 Side Self Study: Read about different DNS record types and learn what they are used for.
+
+
+
+
+
+
+
+
 
 Check that your Web Servers can be reached from your browser using new domain name using HTTP protocol – http://your-domain-name.com
 
@@ -61,6 +96,7 @@ Update the instance and Install Nginx
 
 ```
 sudo apt update
+sudo apt update -y
 sudo apt install nginx -y
 
 sudo systemctl start nginx
