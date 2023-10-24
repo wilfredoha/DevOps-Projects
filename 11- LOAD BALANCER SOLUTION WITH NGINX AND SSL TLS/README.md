@@ -59,7 +59,7 @@ Add the nameservers as shown in the following image.
 
 ![hosted_zone_5](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/hosted_zone_5.png)
 
-Now we need to create two records for our Domain in Route 53. At this point the Load balancer isntance must be running and with the Elastic IP associated.
+Now we need to create two records for our Domain in Route 53. At this point you must have a EC2 VM based on Ubuntu Server 20.04 LTS runnning and with an Elastic IP associated.
 
 Copy the public IP Address of the Loab Balancer.
 
@@ -69,41 +69,59 @@ Copy the public IP Address of the Loab Balancer.
 
 Side Self Study: Read about different DNS record types and learn what they are used for.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## CONFIGURE NGINX AS A LOAD BALANCER
-You can either uninstall Apache from the existing Load Balancer server, or create a fresh installation of Linux for Nginx.
 
-1. Create an EC2 VM based on Ubuntu Server 20.04 LTS and name it Nginx LB (do not forget to open TCP port 80 for HTTP connections, also open TCP port 443 – this port is used for secured HTTPS connections)
-2. Update /etc/hosts file for local DNS with Web Servers’ names (e.g. Web1 and Web2) and their local IP addresses
-3. Install and configure Nginx as a load balancer to point traffic to the resolvable DNS names of the webservers
+The security group of the Load Balancer must have open TCP port 443 – this port is used for secured HTTPS connections
 
 Update the instance and Install Nginx
 
 ```
-sudo apt update
-sudo apt update -y
-sudo apt install nginx -y
+sudo apt update && sudo apt install nginx -y
 
 sudo systemctl start nginx
 sudo systemctl enable nginx
+```
 
+Create a configuration for the reverse proxy setting.
+
+```
 sudo nano /etc/nginx/sites-available/load_balancer.conf
 ```
+
+Add the following cofiguration
+
+```
+upstream web {
+	server <public IP WebServer01>;
+	server <public IP WebServer02>;
+}
+
+server {
+	listen 80;
+
+	server_name whavsttt.xyz www.whavsttt.xyz
+
+	location / {
+		
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_pass http://web;
+	}
+}
+```
+
+Remove the default site
+
+```
+sudo rm -f /etc/nginx/sites-enabled/default
+```
+
+Check the Nginx configuration
+
+```
+sudo nginx -t
+```
+
+![nginx_ok](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/nginx_ok.png)
 
 Configure Nginx LB using Web Servers’ names defined in /etc/hosts
 
