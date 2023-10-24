@@ -36,6 +36,11 @@ Update the instance and Install Nginx
 ```
 sudo apt update
 sudo apt install nginx -y
+
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+sudo nano /etc/nginx/sites-available/load_balancer.conf
 ```
 
 Configure Nginx LB using Web Servers’ names defined in /etc/hosts
@@ -50,6 +55,7 @@ sudo vi /etc/nginx/nginx.conf
 upstream myproject {
     server Web1 weight=5;
     server Web2 weight=5;
+    server Web3 weight=5;
 }
 
 server {
@@ -159,10 +165,3 @@ Side Self Study: Refresh your cron configuration knowledge by watching this vide
 
 You can also use this handy online cron expression editor. ( https://crontab.guru/ )
 
-
-Congratulations!
-You have just implemented an Nginx Load Balancing Web Solution with secured HTTPS connection with periodically updated SSL/TLS 
-certificates.
-
-
-![6032](https://user-images.githubusercontent.com/85270361/210153538-533d7fbb-b4c7-4fc6-81f0-0d325a4fee52.PNG)
