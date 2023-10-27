@@ -98,7 +98,7 @@ upstream backend {
 
     server {
         listen      80;
-        server_name <public-ip-LB-server>;
+        server_name whavsttt.xyz www.whavsttt.xyz;
 
         location / {
 	        proxy_redirect      off;
