@@ -118,13 +118,9 @@ sudo nginx -t
 
 ![nginx_ok](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/nginx_ok.png)
 
-# CONFIGURE SECURED CONNECTION USING SSL/TLS CERTIFICATES
+## CONFIGURE SECURED CONNECTION USING SSL/TLS CERTIFICATES
 
-- Configure Nginx to recognize your new domain name
-Update your nginx.conf with server_name www.your-domain-name.com instead of server_name www.domain.com
-
-- Install certbot and request for an SSL/TLS certificate
-Make sure snapd service is active and running
+- Install certbot and request for an SSL/TLS certificate. Make sure snapd service is active and running
 
 ```
 sudo systemctl status snapd
@@ -133,10 +129,36 @@ sudo systemctl status snapd
 Install certbot
 
 ```
-sudo snap install --classic certbot
+sudo apt install certbot -y
 ```
 
-Request your certificate (just follow the certbot instructions – you will need to choose which domain you want your certificate to be issued for, domain name will be looked up from nginx.conf file so make sure you have updated it on step 4).
+```
+sudo apt install python3-certbot-nginx -y
+```
+
+```
+sudo nginx -t && sudo nginx -s reload
+```
+
+Request your certificate (just follow the certbot instructions – you will need to choose which domain you want your certificate to be issued for).
+
+```
+sudo certbot --nginx -d whavsttt.xyz -d www.whavsttt.xyz
+```
+
+You must enter a valid IP address
+
+![valid_ip](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/valid_ip.png)
+
+After this you just have to follow the instructions.
+
+In the followng section -> Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access, choose 2 to redirect all the incoming requests from port 80 to port 443
+
+![80_to_443](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/80_to_443.png)
+
+After this go and refresh the web page. 
+
+![https](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/https.png)
 
 ```
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
