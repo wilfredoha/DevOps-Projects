@@ -92,13 +92,13 @@ Add the following cofiguration
 
 ```
 upstream backend {
-        server 192.168.0.11;
-        server 192.168.0.12;
+        server <private-ip-web-server-01>;
+        server <private-ip-web-server-02>;
     }
 
     server {
         listen      80;
-        server_name 192.168.0.10;
+        server_name <public-ip-LB-server>;
 
         location / {
 	        proxy_redirect      off;
