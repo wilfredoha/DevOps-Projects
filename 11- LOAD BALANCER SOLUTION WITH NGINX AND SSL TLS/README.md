@@ -160,32 +160,9 @@ After this go and refresh the web page.
 
 ![https](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/https.png)
 
-```
-sudo ln -s /snap/bin/certbot /usr/bin/certbot
-sudo certbot --nginx
-```
+Test secured access to your Web Solution by trying to reach https://*your-domain-name.com*
 
-Test secured access to your Web Solution by trying to reach https://<your-domain-name.com>
-
-You shall be able to access your website by using HTTPS protocol (that uses TCP port 443) and see a padlock pictogram in your browser’s
-search string.
-
-Click on the padlock icon and you can see the details of the certificate issued for your website.
-
-![6031](https://user-images.githubusercontent.com/85270361/210153397-250901f3-b2e3-4f9c-9ca4-ea190acbd034.PNG)
-
-
-- Set up periodical renewal of your SSL/TLS certificate
-By default, LetsEncrypt certificate is valid for 90 days, so it is recommended to renew it at least every 60 days or more frequently.
-
-You can test renewal command in dry-run mode
-
-```
-sudo certbot renew --dry-run
-```
-
-Best pracice is to have a scheduled job that to run renew command periodically. Let us configure a cronjob to run the command twice
-a day.
+Best pracice is to have a scheduled job that to run renew command periodically. Let us configure a cronjob to run the command twice a day.
 
 To do so, lets edit the crontab file with the following command:
 
@@ -201,9 +178,4 @@ Add following line:
 
 You can always change the interval of this cronjob if twice a day is too often by adjusting schedule expression.
 
-Side Self Study: Refresh your cron configuration knowledge by watching this video.
-( https://youtu.be/4g1i0ylvx3A )
-
-
 You can also use this handy online cron expression editor. ( https://crontab.guru/ )
-
