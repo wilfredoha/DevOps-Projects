@@ -118,69 +118,12 @@ sudo nginx -t
 
 ![nginx_ok](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/nginx_ok.png)
 
-***
-***
-***
-
-### XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-Configure Nginx LB using Web Servers’ names defined in /etc/hosts
-
-Open the default nginx configuration file
-
-sudo vi /etc/nginx/nginx.conf
-
-```
-#insert following configuration into http section
-
-upstream myproject {
-    server Web1 weight=5;
-    server Web2 weight=5;
-    server Web3 weight=5;
-}
-
-server {
-    listen 80;
-    server_name www.domain.com;
-    location / {
-      proxy_pass http://myproject;
-    }
-}
-
-#comment out this line
-#       include /etc/nginx/sites-enabled/*;
-```
-
-
-Restart Nginx and make sure the service is up and running
-
-
-```
-sudo systemctl restart nginx
-sudo systemctl status nginx
-```
-
-### XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
-
-
-
-
-
-
-***
-***
-***
-
 # CONFIGURE SECURED CONNECTION USING SSL/TLS CERTIFICATES
 
-
-
-
-4. Configure Nginx to recognize your new domain name
+- Configure Nginx to recognize your new domain name
 Update your nginx.conf with server_name www.your-domain-name.com instead of server_name www.domain.com
 
-5. Install certbot and request for an SSL/TLS certificate
+- Install certbot and request for an SSL/TLS certificate
 Make sure snapd service is active and running
 
 ```
@@ -210,7 +153,7 @@ Click on the padlock icon and you can see the details of the certificate issued 
 ![6031](https://user-images.githubusercontent.com/85270361/210153397-250901f3-b2e3-4f9c-9ca4-ea190acbd034.PNG)
 
 
-6. Set up periodical renewal of your SSL/TLS certificate
+- Set up periodical renewal of your SSL/TLS certificate
 By default, LetsEncrypt certificate is valid for 90 days, so it is recommended to renew it at least every 60 days or more frequently.
 
 You can test renewal command in dry-run mode
