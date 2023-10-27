@@ -91,28 +91,23 @@ sudo nano /etc/nginx/sites-available/load_balancer.conf
 Add the following cofiguration
 
 ```
-upstream web {
-	server <public IP WebServer01>;
-	server <public IP WebServer02>;
-}
+upstream backend {
+        server 192.168.0.11;
+        server 192.168.0.12;
+    }
 
-server {
-	listen 80;
+    server {
+        listen      80;
+        server_name 192.168.0.10;
 
-	server_name whavsttt.xyz www.whavsttt.xyz
-
-	location / {
-		
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		proxy_pass http://web;
+        location / {
+	        proxy_redirect      off;
+	        proxy_set_header    X-Real-IP $remote_addr;
+	        proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+	        proxy_set_header    Host $http_host;
+		proxy_pass http://backend;
 	}
 }
-```
-
-Remove the default site
-
-```
-sudo rm -f /etc/nginx/sites-enabled/default
 ```
 
 Check the Nginx configuration
@@ -123,25 +118,11 @@ sudo nginx -t
 
 ![nginx_ok](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/nginx_ok.png)
 
-Go to. This folder is empty.
-
-```
-cd /etc/nginx/sites-enabled/
-```
-
-Link the Load Balancer config file.
-
-```
-sudo ln -s ../sites-available/load_balancer.conf .
-```
-
-![link_load_balancer_config_file](https://github.com/wilfredoha/DevOps-Projects/blob/main/11-%20LOAD%20BALANCER%20SOLUTION%20WITH%20NGINX%20AND%20SSL%20TLS/images/link_load_balancer_config_file.png)
-
-
 ***
 ***
 ***
 
+### XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Configure Nginx LB using Web Servers’ names defined in /etc/hosts
 
 Open the default nginx configuration file
@@ -178,8 +159,9 @@ sudo systemctl restart nginx
 sudo systemctl status nginx
 ```
 
-Side Self Study: Read more about HTTP load balancing methods and features supported by Nginx
-https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/
+### XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
 
 
 
