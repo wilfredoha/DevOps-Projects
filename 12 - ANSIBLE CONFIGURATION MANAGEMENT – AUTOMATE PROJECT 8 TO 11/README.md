@@ -10,7 +10,7 @@ This Project will make you appreciate DevOps tools even more by making most of t
 
 On the diagram below the Virtual Private Network (VPC) is divided into two subnets – Public subnet has public IP addresses and Private subnet is only reachable by private IP addresses.
 
-![6033](https://user-images.githubusercontent.com/85270361/210153615-ea6cf398-05d3-45d0-9ea4-6daffac7fa4c.PNG)
+![bastion](https://github.com/wilfredoha/DevOps-Projects/blob/main/12%20-%20ANSIBLE%20CONFIGURATION%20MANAGEMENT%20%E2%80%93%20AUTOMATE%20PROJECT%208%20TO%2011/images/bastion.png)
 
 In a later project we will see a Bastion host in proper action. But for now, we will develop Ansible scripts to simulate the use of a Jump box/Bastion host to access our Web Servers.
 
