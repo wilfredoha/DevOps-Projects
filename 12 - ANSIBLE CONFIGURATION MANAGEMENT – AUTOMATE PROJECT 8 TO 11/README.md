@@ -114,6 +114,10 @@ ssh -A ubuntu@public-ip
 
 ![ssh_instance](https://github.com/wilfredoha/DevOps-Projects/blob/main/12%20-%20ANSIBLE%20CONFIGURATION%20MANAGEMENT%20%E2%80%93%20AUTOMATE%20PROJECT%208%20TO%2011/images/ssh_instance.png)
 
+Now you can ssh into the other instances using the private IPs
+
+![ssh_private](https://github.com/wilfredoha/DevOps-Projects/blob/main/12%20-%20ANSIBLE%20CONFIGURATION%20MANAGEMENT%20%E2%80%93%20AUTOMATE%20PROJECT%208%20TO%2011/images/ssh_private.png)
+
 Also notice, that your Load Balancer user is ubuntu and user for RHEL-based servers is ec2-user.
 
 Update your inventory/dev.yml file with this snippet of code:
