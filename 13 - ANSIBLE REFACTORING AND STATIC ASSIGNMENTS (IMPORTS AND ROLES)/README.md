@@ -49,8 +49,6 @@ sudo chmod -R 0777 /home/ubuntu/ansible-config-artifact
 
 Now your Jenkins pipeline is more neat and clean.
 
-# REFACTOR ANSIBLE CODE BY IMPORTING OTHER PLAYBOOKS INTO SITE.YML
-
 ## Refactor Ansible code by importing other playbooks into site.yml
 
 Before starting to refactor the codes, ensure that you have pulled down the latest code from master (main) branch, and created a new branch, name it refactor.
@@ -83,17 +81,7 @@ The code above uses built in import_playbook Ansible module.
 
 Your folder structure should look like this:
 
-```
-├── static-assignments
-│   └── common.yml
-├── inventory
-    └── dev
-    └── stage
-    └── uat
-    └── prod
-└── playbooks
-    └── site.yml
-```
+![folders_files](https://github.com/wilfredoha/DevOps-Projects/blob/main/13%20-%20ANSIBLE%20REFACTORING%20AND%20STATIC%20ASSIGNMENTS%20(IMPORTS%20AND%20ROLES)/images/folders_files.png)
 
 5. Run ansible-playbook command against the dev environment. Since you need to apply some tasks to your dev servers and wireshark is already installed – you can go ahead and create another playbook under static-assignments and name it common-del.yml. In this playbook, configure deletion of wireshark utility.
 
