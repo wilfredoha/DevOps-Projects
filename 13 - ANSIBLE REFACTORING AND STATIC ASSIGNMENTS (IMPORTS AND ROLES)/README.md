@@ -29,7 +29,7 @@ sudo chmod -R 0777 /home/ubuntu/ansible-config-artifact
 
 3. Go to Jenkins web console -> Manage Jenkins -> Manage Plugins -> on Available tab search for Copy Artifact and install this plugin without restarting Jenkins
 
-![6040](https://user-images.githubusercontent.com/85270361/210154793-892dfd40-6736-46e6-a377-4a27443fbc66.PNG)
+![copy_artifact](https://github.com/wilfredoha/DevOps-Projects/blob/main/13%20-%20ANSIBLE%20REFACTORING%20AND%20STATIC%20ASSIGNMENTS%20(IMPORTS%20AND%20ROLES)/images/copy_artifact.png)
 
 4. Create a new Freestyle project and name it save_artifacts.
 
