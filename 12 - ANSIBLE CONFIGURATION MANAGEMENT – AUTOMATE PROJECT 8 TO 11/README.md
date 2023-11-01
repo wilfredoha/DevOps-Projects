@@ -184,7 +184,7 @@ Feel free to update this playbook with following tasks:
 
 For a better understanding of Ansible playbooks – watch this video from RedHat ( https://youtu.be/ZAdJ7CdN7DY ) and read this article ( https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook ).
 
-Step 6 – Update GIT with the latest code
+### Update GIT with the latest code
 Now all of your directories and files live on your machine and you need to push changes made locally to GitHub.
 
 In the real world, you will be working within a team of other DevOps engineers and developers. It is important to learn how to collaborate with help of GIT. In many organisations there is a development rule that do not allow to deploy any code before it has been reviewed by an extra pair of eyes – it is also called "Four eyes principle".
@@ -213,11 +213,22 @@ git commit -m "commit message"
 
 Once your code changes appear in master branch – Jenkins will do its job and save all the files (build artifacts) to /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/ directory on Jenkins-Ansible server.
 
+```
+ls -l /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/
+```
+
+![files_in_ansible_server](https://github.com/wilfredoha/DevOps-Projects/blob/main/12%20-%20ANSIBLE%20CONFIGURATION%20MANAGEMENT%20%E2%80%93%20AUTOMATE%20PROJECT%208%20TO%2011/images/files_in_ansible_server.png)
+
 ## RUN FIRST ANSIBLE TEST
 
 ### Run first Ansible test
 
 Now, it is time to execute ansible-playbook command and verify if your playbook actually works:
+
+```
+ansible-playbook -i /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/inventory/dev.yml /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/playbooks/common.yml
+```
+
 
 ```
 cd ansible-config-mgt
