@@ -39,7 +39,7 @@ sudo chmod -R 0777 /home/ubuntu/ansible-config-artifact
 
 ![save_artifacts_02](https://github.com/wilfredoha/DevOps-Projects/blob/main/13%20-%20ANSIBLE%20REFACTORING%20AND%20STATIC%20ASSIGNMENTS%20(IMPORTS%20AND%20ROLES)/images/save_artifacts_02.png)
 
-Note: You can configure number of builds to keep in order to save space on the server, for example, you might want to keep only last 2 or 5 build results. You can also make this change to your ansible job.
+>Note: You can configure number of builds to keep in order to save space on the server, for example, you might want to keep only last 2 or 5 build results. You can also make this change to your ansible job.
 
 6. The main idea of save_artifacts project is to save artifacts into /home/ubuntu/ansible-config-artifact directory. To achieve this, create a Build step and choose Copy artifacts from other project, specify ansible as a source project and /home/ubuntu/ansible-config-artifact as a target directory.
 
