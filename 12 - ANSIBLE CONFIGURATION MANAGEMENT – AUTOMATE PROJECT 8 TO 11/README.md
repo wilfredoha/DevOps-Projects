@@ -242,3 +242,27 @@ Your updated with Ansible architecture now looks like this:
 
 Optional step – Repeat once again
 Update your ansible playbook with some new Ansible tasks and go through the full checkout -> change codes -> commit -> PR -> merge -> build -> ansible-playbook cycle again to see how easily you can manage a servers fleet of any size with just one command!
+
+Add the next code to the end of the common.yml file
+
+```
+- name: create directory, file and set timezone on all servers
+  hosts: webservers, nfs, db, lb
+  become: yes
+  tasks:
+    - name: create a directory
+      file:
+        path: /home/sample
+        state: directory
+
+    - name: create a file
+      file:
+        path: /home/sample/ansible.txt
+        state: touch
+        
+    - name: set timezone
+      timezone:
+        name: America/Montevideo
+```
+
+![final_common](https://github.com/wilfredoha/DevOps-Projects/blob/main/12%20-%20ANSIBLE%20CONFIGURATION%20MANAGEMENT%20%E2%80%93%20AUTOMATE%20PROJECT%208%20TO%2011/images/final_common.png)
