@@ -229,24 +229,15 @@ Now, it is time to execute ansible-playbook command and verify if your playbook 
 ansible-playbook -i /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/inventory/dev.yml /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/playbooks/common.yml
 ```
 
-
-```
-cd ansible-config-mgt
-```
-
-```
-ansible-playbook -i inventory/dev.yml playbooks/common.yml
-```
-
 You can go to each of the servers and check if wireshark has been installed by running which wireshark or wireshark --version
 
 
-![6037](https://user-images.githubusercontent.com/85270361/210154560-3fa50ba8-67b4-45c8-9da1-8d9bdd45e418.PNG)
+![wireshark](https://github.com/wilfredoha/DevOps-Projects/blob/main/12%20-%20ANSIBLE%20CONFIGURATION%20MANAGEMENT%20%E2%80%93%20AUTOMATE%20PROJECT%208%20TO%2011/images/wireshark.png)
 
 
 Your updated with Ansible architecture now looks like this:
 
-![6038](https://user-images.githubusercontent.com/85270361/210154593-092a4ee2-ab8b-4212-a260-8845c3f8693a.PNG)
+![final_architecture](https://github.com/wilfredoha/DevOps-Projects/blob/main/12%20-%20ANSIBLE%20CONFIGURATION%20MANAGEMENT%20%E2%80%93%20AUTOMATE%20PROJECT%208%20TO%2011/images/final_architecture.png)
 
 
 Optional step – Repeat once again
