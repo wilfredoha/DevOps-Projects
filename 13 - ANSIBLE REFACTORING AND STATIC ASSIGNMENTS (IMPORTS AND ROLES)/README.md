@@ -27,7 +27,7 @@ sudo mkdir /home/ubuntu/ansible-config-artifact
 sudo chmod -R 0777 /home/ubuntu/ansible-config-artifact
 ```
 
-3. Go to Jenkins web console -> Manage Jenkins -> Manage Plugins -> on Available tab search for Copy Artifact and install this plugin without restarting Jenkins
+3. Go to Jenkins web console -> Manage Jenkins -> Manage Plugins -> on Available tab search for Copy Artifact and install this plugin.
 
 ![copy_artifact](https://github.com/wilfredoha/DevOps-Projects/blob/main/13%20-%20ANSIBLE%20REFACTORING%20AND%20STATIC%20ASSIGNMENTS%20(IMPORTS%20AND%20ROLES)/images/copy_artifact.png)
 
@@ -35,7 +35,9 @@ sudo chmod -R 0777 /home/ubuntu/ansible-config-artifact
 
 5. This project will be triggered by completion of your existing ansible project. Configure it accordingly:
 
-![6041](https://user-images.githubusercontent.com/85270361/210154820-37b5f148-ebbc-4b96-9872-f4b772cf9d58.PNG)
+![save_artifacts_01](https://github.com/wilfredoha/DevOps-Projects/blob/main/13%20-%20ANSIBLE%20REFACTORING%20AND%20STATIC%20ASSIGNMENTS%20(IMPORTS%20AND%20ROLES)/images/save_artifacts_01.png)
+
+![save_artifacts_02](https://github.com/wilfredoha/DevOps-Projects/blob/main/13%20-%20ANSIBLE%20REFACTORING%20AND%20STATIC%20ASSIGNMENTS%20(IMPORTS%20AND%20ROLES)/images/save_artifacts_02.png)
 
 Note: You can configure number of builds to keep in order to save space on the server, for example, you might want to keep only last 2 or 5 build results. You can also make this change to your ansible job.
 
