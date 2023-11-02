@@ -5,7 +5,7 @@ In this project you will continue working with ansible-config-mgt repository and
 Side Self Study: For better understanding on Ansible [artifacts re-use click here]( https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse.html )
 
 
-Code Refactoring
+### Code Refactoring
 Refactoring ( https://en.wikipedia.org/wiki/Code_refactoring ) is a general term in computer programming. It means making changes to the source code without changing expected behaviour of the software. The main idea of refactoring is to enhance code readability, increase maintainability and extensibility, reduce complexity, add proper comments without affecting the logic.
 
 In your case, you will move things around a little bit in the code, but the overal state of the infrastructure remains the same.
