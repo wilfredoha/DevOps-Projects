@@ -292,5 +292,5 @@ http://Web1-UAT-Server-Public-IP-or-Public-DNS-Name/index.php
 
 Your Ansible architecture now looks like this:
   
-![6043](https://user-images.githubusercontent.com/85270361/210155433-92f8eac4-d31f-4cbe-af16-16dd70b2a498.PNG)
+![final_architecture](https://github.com/wilfredoha/DevOps-Projects/blob/main/13%20-%20ANSIBLE%20REFACTORING%20AND%20STATIC%20ASSIGNMENTS%20(IMPORTS%20AND%20ROLES)/images/final_architecture.png)
   
