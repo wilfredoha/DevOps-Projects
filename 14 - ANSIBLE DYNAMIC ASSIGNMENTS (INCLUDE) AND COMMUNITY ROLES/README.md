@@ -22,7 +22,7 @@ Take note that in most cases it is recommended to use static assignments for pla
 
 ## INTRODUCING DYNAMIC ASSIGNMENT INTO OUR STRUCTURE
 
-In your https://github.com/<your-name>/ansible-config-mgt GitHub repository start a new branch and call it dynamic-assignments.
+In your https://github.com/your-name/ansible-config-mgt GitHub repository start a new branch and call it dynamic-assignments.
 
 Create a new folder, name it dynamic-assignments. Then inside this folder, create a new file and name it env-vars.yml. We will instruct site.yml to include this playbook later. For now, let us keep building up the structure.
 
