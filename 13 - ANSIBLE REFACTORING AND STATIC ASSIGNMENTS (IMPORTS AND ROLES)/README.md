@@ -113,7 +113,13 @@ Your folder structure should look like this:
       autoclean: yes
 ```
 
-update site.yml with - import_playbook: ../static-assignments/common-del.yml instead of common.yml and run it against dev servers:
+update **site.yml** with: - import_playbook: ../static-assignments/common-del.yml instead of common.yml and run it against dev servers:
+
+```
+---
+- hosts: uat-webservers
+- import_playbook: ../static-assignments/uat-webservers.yml
+```
 
 ```
 cd /home/ubuntu/ansible-config-artifact
