@@ -150,8 +150,7 @@ mkdir /home/ubuntu/ansible-config-artifact/roles
 cd /home/ubuntu/ansible-config-artifact/roles
 ansible-galaxy init webserver
 ```
-
-3. Create the directory/files structure manually
+- Create the directory/files structure manually
 
 >Note: You can choose either way, but since you store all your codes in GitHub, it is recommended to create folders and files there rather than locally on Jenkins-Ansible server.
 
