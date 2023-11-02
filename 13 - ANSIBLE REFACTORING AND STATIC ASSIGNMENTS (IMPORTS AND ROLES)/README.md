@@ -193,7 +193,7 @@ After removing unnecessary directories and files, the roles structure should loo
 ```
 
 4. Update your inventory ansible-config-mgt/inventory/uat.yml file with IP addresses of your 2 UAT Web servers
-NOTE: Ensure you are using ssh-agent to ssh into the Jenkins-Ansible instance just as you have done in project 12;
+NOTE: Ensure you are using ssh-agent to ssh into the Jenkins-Ansible instance just as you have done in project 12.
 
 ```
 [uat-webservers]
