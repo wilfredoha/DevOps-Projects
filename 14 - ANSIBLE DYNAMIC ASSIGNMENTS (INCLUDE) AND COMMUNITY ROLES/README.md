@@ -97,17 +97,17 @@ Notice 3 things here:
 
 We used include_vars syntax instead of include, this is because Ansible developers decided to separate different features of the module. From Ansible version 2.8, the include module is deprecated and variants of include_* must be used. These are:
   
-- include_role ( https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html#include-role-module )
-- include_tasks ( https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_tasks_module.html#include-tasks-module )
-- include_vars ( https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_vars_module.html#include-vars-module )
+- include_role (https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html#include-role-module)
+- include_tasks (https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_tasks_module.html#include-tasks-module)
+- include_vars (https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_vars_module.html#include-vars-module)
   
 In the same version, variants of import were also introduces, such as:
 
-- import_role ( https://docs.ansible.com/ansible/latest/collections/ansible/builtin/import_role_module.html#import-role-module )
-- import_tasks ( https://docs.ansible.com/ansible/latest/collections/ansible/builtin/import_tasks_module.html#import-tasks-module )
+- import_role (https://docs.ansible.com/ansible/latest/collections/ansible/builtin/import_role_module.html#import-role-module)
+- import_tasks (https://docs.ansible.com/ansible/latest/collections/ansible/builtin/import_tasks_module.html#import-tasks-module)
   
   
-2. We made use of a special variables( https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html ) { playbook_dir } and { inventory_file }. { playbook_dir } will help Ansible to determine the location of the running playbook, and from there navigate to other path on the filesystem. { inventory_file } on the other hand will dynamically resolve to the name of the inventory file being used, then append .yml so that it picks up the required file within the env-vars folder.
+2. We made use of a special variables(https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html) { playbook_dir } and { inventory_file }. { playbook_dir } will help Ansible to determine the location of the running playbook, and from there navigate to other path on the filesystem. { inventory_file } on the other hand will dynamically resolve to the name of the inventory file being used, then append .yml so that it picks up the required file within the env-vars folder.
 
 3. We are including the variables using a loop. with_first_found implies that, looping through the list of files, the first one found is used. This is good so that we can always set default values in case an environment specific env file does not exist.
   
@@ -127,7 +127,7 @@ site.yml should now look like this.
   tags:
     - always
 
--  hosts: webservers
+- hosts: webservers
 - name: Webserver assignment
   import_playbook: ../static-assignments/webservers.yml
 ```
@@ -136,11 +136,11 @@ site.yml should now look like this.
 Now it is time to create a role for MySQL database – it should install the MySQL package, create a database and configure users. But why should we re-invent the wheel? There are tons of roles that have already been developed by other open source engineers out there. These roles are actually production ready, and dynamic to accomodate most of Linux flavours. With Ansible Galaxy again, we can simply download a ready to use ansible role, and keep going.
 
 Download Mysql Ansible Role
-You can browse available community roles here ( https://galaxy.ansible.com/home )
+You can browse available community roles here (https://galaxy.ansible.com/home)
 
-We will be using a MySQL role developed by geerlingguy. ( https://galaxy.ansible.com/geerlingguy/mysql )
+We will be using a MySQL role developed by geerlingguy. (https://galaxy.ansible.com/geerlingguy/mysql)
 
-Hint: To preserve your GitHub in actual state after you install a new role – make a commit and push to master your 'ansible-config-mgt' directory. Of course you must have git installed and configured on Jenkins-Ansible server and, for more convenient work with codes, you can configure Visual Studio Code to work with this directory. In this case, you will no longer need webhook and Jenkins jobs to update your codes on Jenkins-Ansible server, so you can disable it – we will be using Jenkins
+>Hint: To preserve your GitHub in actual state after you install a new role – make a commit and push to master your 'ansible-config-mgt' directory. Of course you must have git installed and configured on Jenkins-Ansible server and, for more convenient work with codes, you can configure Visual Studio Code to work with this directory. In this case, you will no longer need webhook and Jenkins jobs to update your codes on Jenkins-Ansible server, so you can disable it – we will be using Jenkins
 later for a better purpose.
 
 On Jenkins-Ansible server make sure that git is installed with git --version, then go to 'ansible-config-mgt' directory and run
@@ -155,8 +155,12 @@ git switch roles-feature
 
 Inside roles directory create your new MySQL role with ansible-galaxy install geerlingguy.mysql and rename the folder to mysql
 
+![geerlingguy_mysql](https://github.com/wilfredoha/DevOps-Projects/blob/main/14%20-%20ANSIBLE%20DYNAMIC%20ASSIGNMENTS%20(INCLUDE)%20AND%20COMMUNITY%20ROLES/images/geerlingguy_mysql.png)
+
 ```
-mv geerlingguy.mysql/ mysql
+sudo mv /home/ubuntu/ansible-config-artifact/roles/geerlingguy.mysql ansible-config-mgt/roles/
+
+sudo mv geerlingguy.mysql/ mysql
 ```
 
 Read README.md file, and edit roles configuration to use correct credentials for MySQL required for the tooling website.
@@ -166,10 +170,14 @@ Now it is time to upload the changes into your GitHub:
 ```
 git add .
 git commit -m "Commit new role files into GitHub"
-git push --set-upstream origin roles-feature
+git push origin roles-feature
 ```
 
 Now, if you are satisfied with your codes, you can create a Pull Request and merge it to main branch on GitHub.
+
+Now you need to change the configuration of the mysql role
+
+![role_mysql_config_01](https://github.com/wilfredoha/DevOps-Projects/blob/main/14%20-%20ANSIBLE%20DYNAMIC%20ASSIGNMENTS%20(INCLUDE)%20AND%20COMMUNITY%20ROLES/images/role_mysql_config_01.png)
 
 # LOAD BALANCER ROLES
 
