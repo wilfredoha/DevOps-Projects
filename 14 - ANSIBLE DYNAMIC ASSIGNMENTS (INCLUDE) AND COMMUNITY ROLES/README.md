@@ -203,6 +203,16 @@ sudo mv /home/ubuntu/ansible-config-artifact/roles/geerlingguy.apache apache
 
 ![role_apache_nginx](https://github.com/wilfredoha/DevOps-Projects/blob/main/14%20-%20ANSIBLE%20DYNAMIC%20ASSIGNMENTS%20(INCLUDE)%20AND%20COMMUNITY%20ROLES/images/role_apache_nginx.png)
 
+Got to roles -> nginx -> defaulta -> main.yml and look for the **nginx_upstreams** section, and add the private IPs of your Web Servers
+
+![nginx_upstreams](https://github.com/wilfredoha/DevOps-Projects/blob/main/14%20-%20ANSIBLE%20DYNAMIC%20ASSIGNMENTS%20(INCLUDE)%20AND%20COMMUNITY%20ROLES/images/nginx_upstreams.png)
+
+Look for the **nginx_extra_http_options** section and change it
+
+![nginx_extra_http_options](https://github.com/wilfredoha/DevOps-Projects/blob/main/14%20-%20ANSIBLE%20DYNAMIC%20ASSIGNMENTS%20(INCLUDE)%20AND%20COMMUNITY%20ROLES/images/nginx_extra_http_options.png)
+
+
+
 Important Hints:
 
 - Since you cannot use both Nginx and Apache load balancer, you need to add a condition to enable either one – this is where you can make use of variables.
