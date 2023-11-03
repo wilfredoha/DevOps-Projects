@@ -191,6 +191,18 @@ With your experience on Ansible so far you can:
 - Decide if you want to develop your own roles, or find available ones from the community
 - Update both static-assignment and site.yml files to refer the roles
 
+```
+cd ansible-config-mgt/roles
+
+ansible-galaxy install geerlingguy.nginx
+sudo mv /home/ubuntu/ansible-config-artifact/roles/geerlingguy.nginx nginx
+
+ansible-galaxy install geerlingguy.apache
+sudo mv /home/ubuntu/ansible-config-artifact/roles/geerlingguy.apache apache
+```
+
+![role_apache_nginx](https://github.com/wilfredoha/DevOps-Projects/blob/main/14%20-%20ANSIBLE%20DYNAMIC%20ASSIGNMENTS%20(INCLUDE)%20AND%20COMMUNITY%20ROLES/images/role_apache_nginx.png)
+
 Important Hints:
 
 - Since you cannot use both Nginx and Apache load balancer, you need to add a condition to enable either one – this is where you can make use of variables.
